@@ -11,6 +11,7 @@ import {
   Download
 } from 'lucide-react';
 import { useI18n } from '@/i18n/I18nContext';
+import { cn } from '@/lib/utils';
 
 const Links = () => {
   const { t } = useI18n();
@@ -30,7 +31,7 @@ const Links = () => {
     },
     {
       name: 'GMTSAR Downloads',
-      url: 'https://topex.ucsd.edu/gmtsar/downloads/',
+      url: 'https://gmtsar.github.io',
       icon: <Download size={28} />,
       description: t('links.academic_profiles.gmtsar_downloads')
     }
@@ -205,8 +206,6 @@ const Links = () => {
   );
 };
 
-function cn(...inputs: any[]) {
-  return inputs.filter(Boolean).join(' ');
-}
+
 
 export default Links;
