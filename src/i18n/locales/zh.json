@@ -1,0 +1,152 @@
+{
+  "header": {
+    "home": "首页",
+    "team": "团队成员",
+    "research": "研究成果",
+    "teaching": "教学工作",
+    "news": "新闻动态",
+    "gallery": "图片 gallery",
+    "links": "相关链接"
+  },
+  "home": {
+    "hero": {
+      "subtitle": "中国科学技术大学InSAR研究团队",
+      "description": "Advanced InSAR Research for Earth Observation · 先进InSAR技术与地球观测研究",
+      "btn_research": "查看研究",
+      "btn_team": "认识团队"
+    },
+    "welcome": {
+      "title": "欢迎来到USTC-InSAR研究团队",
+      "paragraph1": "我们是中国科学技术大学地球和空间科学学院的USTC-InSAR团队，由许效华教授领导。",
+      "paragraph2": "团队致力于InSAR技术的开发与应用，利用卫星雷达数据开展高精度地表形变监测、地震大地测量及地壳形变研究。",
+      "paragraph3": "我们的研究成果广泛发表于国际顶尖期刊，为地球科学研究和自然灾害预警做出了重要贡献。"
+    },
+    "research_areas": {
+      "title": "研究方向",
+      "description": "我们专注于以下主要研究领域，推动InSAR技术与地球观测科学的发展",
+      "areas": {
+        "insar": {
+          "title": "InSAR技术与应用",
+          "description": "开发先进的合成孔径雷达干涉测量技术，用于高精度地表形变监测。"
+        },
+        "earthquake": {
+          "title": "地震大地测量",
+          "description": "利用InSAR数据研究地震同震、震后形变及地震周期动力学过程。"
+        },
+        "crustal": {
+          "title": "地壳形变研究",
+          "description": "研究青藏高原及周边地区的长期地壳形变与构造运动。"
+        }
+      }
+    },
+    "news": {
+      "title": "最新动态",
+      "description": "了解我们团队的最新进展",
+      "btn_all": "查看全部"
+    },
+    "cta": {
+      "title": "加入我们",
+      "description": "我们热忱欢迎有志于InSAR技术和地球观测研究的优秀学生加入我们的团队！",
+      "btn_team": "了解团队",
+      "btn_research": "查看研究"
+    }
+  },
+  "footer": {
+    "description": "致力于InSAR技术研究与应用，推动地球观测科学发展。",
+    "quick_links": "快速链接",
+    "contact_us": "联系我们",
+    "address": "中国科学技术大学\n安徽省合肥市",
+    "copyright": "© {{year}} USTC-InSAR研究团队 版权所有。"
+  },
+  "research": {
+    "hero": {
+      "title": "研究成果",
+      "description": "我们的研究方向与学术发表"
+    },
+    "areas": {
+      "title": "研究领域",
+      "description": "我们专注于以下核心研究方向",
+      "insar": {
+        "title": "InSAR技术与应用",
+        "description": "我们开发和优化InSAR处理算法，提高形变监测的精度和效率。优化InSAR数据处理流程包括自动化，相位解缠优化算法，时间序列分析等关键技术。"
+      },
+      "earthquake": {
+        "title": "地震大地测量",
+        "description": "利用InSAR数据研究地震的同震形变、震后滑移及地震周期。我们的研究为理解地震机制和地震危险性评估提供重要依据。"
+      },
+      "ai": {
+        "title": "InSAR与AI的交叉运用",
+        "description": "将人工智能技术与InSAR数据处理相结合，开发智能解译算法，提高数据处理效率和形变识别精度，探索新的InSAR应用领域。"
+      }
+    },
+    "publications": {
+      "title": "学术发表",
+      "description": "我们团队的研究论文发表情况",
+      "search": "搜索论文标题、作者或期刊...",
+      "year_filter": "全部年份",
+      "type_filter": "全部类型",
+      "no_results": "没有找到匹配的论文",
+      "filters": {
+        "journal": "期刊论文",
+        "conference": "会议论文"
+      }
+    }
+  },
+  "teaching": {
+    "hero": {
+      "title": "教学工作",
+      "description": "培养下一代地球观测科学家"
+    },
+    "courses": {
+      "title": "讲授课程",
+      "download_syllabus": "下载教学大纲"
+    },
+    "achievements": {
+      "title": "教学成就",
+      "no_data": "暂无教学成就信息，后续将更新。"
+    },
+    "resources": {
+      "title": "学生资源",
+      "no_data": "暂无学生资源信息，后续将更新。"
+    }
+  },
+  "news": {
+    "hero": {
+      "title": "新闻动态",
+      "description": "了解团队的最新进展与活动"
+    },
+    "categories": {
+      "all": "全部",
+      "award": "荣誉奖项",
+      "publication": "论文发表",
+      "event": "团队活动",
+      "other": "其他"
+    },
+    "no_data": "暂无相关新闻"
+  },
+  "gallery": {
+    "hero": {
+      "title": "图片库",
+      "description": "记录团队的精彩瞬间"
+    },
+    "categories": {
+      "group_photos": "团队合影",
+      "conferences": "学术会议",
+      "field_work": "野外考察",
+      "social_events": "社交活动"
+    }
+  },
+  "links": {
+    "hero": {
+      "title": "相关链接",
+      "description": "学术资源、数据平台与有用工具"
+    },
+    "sections": {
+      "academic_profiles": "学术档案",
+      "related_websites": "相关网站",
+      "sar_data_portals": "SAR数据平台",
+      "insar_tools": "InSAR处理工具"
+    },
+    "visit": "访问"
+  }
+}

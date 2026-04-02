@@ -2,18 +2,20 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronRight, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useI18n } from '@/i18n/I18nContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { locale, setLocale, t } = useI18n();
 
   const navLinks = [
-    { path: '/', label: '首页' },
-    { path: '/team', label: '团队成员' },
-    { path: '/research', label: '研究成果' },
-    { path: '/teaching', label: '教学工作' },
-    { path: '/news', label: '新闻与图库' },
-    { path: '/links', label: '相关链接' },
+    { path: '/', key: 'header.home' },
+    { path: '/team', key: 'header.team' },
+    { path: '/research', key: 'header.research' },
+    { path: '/teaching', key: 'header.teaching' },
+    { path: '/news', key: 'header.news' },
+    { path: '/links', key: 'header.links' },
   ];
 
   return (
@@ -32,22 +34,48 @@ const Header = () => {
             </Link>
           </div>
 
-          <nav className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
+          <div className="hidden md:flex items-center gap-4">
+            <nav className="flex items-center gap-1">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={cn(
+                    'px-4 py-2 rounded-md text-sm font-medium transition-colors',
+                    location.pathname === link.path
+                      ? 'bg-[#C41E3A] text-white'
+                      : 'text-gray-700 hover:bg-gray-100 hover:text-[#C41E3A]'
+                  )}
+                >
+                  {t(link.key)}
+                </Link>
+              ))}
+            </nav>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setLocale('en')}
                 className={cn(
-                  'px-4 py-2 rounded-md text-sm font-medium transition-colors',
-                  location.pathname === link.path
-                    ? 'bg-[#C41E3A] text-white'
-                    : 'text-gray-700 hover:bg-gray-100 hover:text-[#C41E3A]'
+                  'px-3 py-1 rounded-md text-sm font-medium transition-colors',
+                  locale === 'en'
+                    ? 'bg-[#003366] text-white'
+                    : 'text-gray-700 hover:bg-gray-100'
                 )}
               >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+                EN
+              </button>
+              <button
+                onClick={() => setLocale('zh')}
+                className={cn(
+                  'px-3 py-1 rounded-md text-sm font-medium transition-colors',
+                  locale === 'zh'
+                    ? 'bg-[#003366] text-white'
+                    : 'text-gray-700 hover:bg-gray-100'
+                )}
+              >
+                中文
+              </button>
+            </div>
+          </div>
 
           <button
             className="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100"
@@ -73,9 +101,33 @@ const Header = () => {
                 )}
                 onClick={() => setIsMenuOpen(false)}
               >
-                {link.label}
+                {t(link.key)}
               </Link>
             ))}
+            <div className="flex items-center gap-2 px-4 py-3">
+              <button
+                onClick={() => setLocale('en')}
+                className={cn(
+                  'px-3 py-1 rounded-md text-sm font-medium transition-colors',
+                  locale === 'en'
+                    ? 'bg-[#003366] text-white'
+                    : 'text-gray-700 hover:bg-gray-100'
+                )}
+              >
+                EN
+              </button>
+              <button
+                onClick={() => setLocale('zh')}
+                className={cn(
+                  'px-3 py-1 rounded-md text-sm font-medium transition-colors',
+                  locale === 'zh'
+                    ? 'bg-[#003366] text-white'
+                    : 'text-gray-700 hover:bg-gray-100'
+                )}
+              >
+                中文
+              </button>
+            </div>
           </div>
         </div>
       )}

@@ -1,0 +1,152 @@
+{
+  "header": {
+    "home": "Home",
+    "team": "Team",
+    "research": "Research",
+    "teaching": "Teaching",
+    "news": "News",
+    "gallery": "Gallery",
+    "links": "Links"
+  },
+  "home": {
+    "hero": {
+      "subtitle": "University of Science and Technology of China InSAR Research Team",
+      "description": "Advanced InSAR Research for Earth Observation · 先进InSAR技术与地球观测研究",
+      "btn_research": "Explore Research",
+      "btn_team": "Meet the Team"
+    },
+    "welcome": {
+      "title": "Welcome to USTC-InSAR Research Team",
+      "paragraph1": "We are the USTC-InSAR team from the School of Earth and Space Sciences at the University of Science and Technology of China, led by Professor Xiaohua Xu.",
+      "paragraph2": "Our team is dedicated to the development and application of InSAR technology, using satellite radar data to conduct high-precision surface deformation monitoring, earthquake geodesy, and crustal deformation research.",
+      "paragraph3": "Our research results are widely published in top international journals, making important contributions to earth science research and natural disaster early warning."
+    },
+    "research_areas": {
+      "title": "Research Areas",
+      "description": "We focus on the following key research areas, promoting the development of InSAR technology and earth observation science",
+      "areas": {
+        "insar": {
+          "title": "InSAR Technology and Applications",
+          "description": "Developing advanced synthetic aperture radar interferometry technology for high-precision surface deformation monitoring."
+        },
+        "earthquake": {
+          "title": "Earthquake Geodesy",
+          "description": "Using InSAR data to study earthquake coseismic, post-seismic deformation and earthquake cycle dynamic processes."
+        },
+        "crustal": {
+          "title": "Crustal Deformation Research",
+          "description": "Studying long-term crustal deformation and tectonic movement in the Qinghai-Tibet Plateau and surrounding areas."
+        }
+      }
+    },
+    "news": {
+      "title": "Latest News",
+      "description": "Stay updated with our team's latest developments",
+      "btn_all": "View All"
+    },
+    "cta": {
+      "title": "Join Us",
+      "description": "We warmly welcome outstanding students interested in InSAR technology and earth observation research to join our team!",
+      "btn_team": "Learn About the Team",
+      "btn_research": "Explore Research"
+    }
+  },
+  "footer": {
+    "description": "Dedicated to InSAR technology research and application, promoting the development of earth observation science.",
+    "quick_links": "Quick Links",
+    "contact_us": "Contact Us",
+    "address": "University of Science and Technology of China\nHefei, Anhui Province",
+    "copyright": "© {{year}} USTC-InSAR Research Group. All rights reserved."
+  },
+  "research": {
+    "hero": {
+      "title": "Research Results",
+      "description": "Our research directions and academic publications"
+    },
+    "areas": {
+      "title": "Research Areas",
+      "description": "We focus on the following core research directions",
+      "insar": {
+        "title": "InSAR Technology and Applications",
+        "description": "We develop and optimize InSAR processing algorithms to improve the accuracy and efficiency of deformation monitoring. Optimizing InSAR data processing workflows includes automation, phase unwrapping optimization algorithms, time series analysis and other key technologies."
+      },
+      "earthquake": {
+        "title": "Earthquake Geodesy",
+        "description": "Using InSAR data to study earthquake coseismic deformation, post-seismic slip, and earthquake cycles. Our research provides important basis for understanding earthquake mechanisms and earthquake hazard assessment."
+      },
+      "ai": {
+        "title": "Intersection of InSAR and AI",
+        "description": "Combining artificial intelligence technology with InSAR data processing, developing intelligent interpretation algorithms, improving data processing efficiency and deformation recognition accuracy, and exploring new InSAR application areas."
+      }
+    },
+    "publications": {
+      "title": "Academic Publications",
+      "description": "Research papers published by our team",
+      "search": "Search paper title, author or journal...",
+      "year_filter": "All Years",
+      "type_filter": "All Types",
+      "no_results": "No matching papers found",
+      "filters": {
+        "journal": "Journal Paper",
+        "conference": "Conference Paper"
+      }
+    }
+  },
+  "teaching": {
+    "hero": {
+      "title": "Teaching",
+      "description": "Cultivating the next generation of earth observation scientists"
+    },
+    "courses": {
+      "title": "Courses Taught",
+      "download_syllabus": "Download Syllabus"
+    },
+    "achievements": {
+      "title": "Teaching Achievements",
+      "no_data": "No teaching achievement information available, will be updated later."
+    },
+    "resources": {
+      "title": "Student Resources",
+      "no_data": "No student resource information available, will be updated later."
+    }
+  },
+  "news": {
+    "hero": {
+      "title": "News & Updates",
+      "description": "Stay updated with our team's latest developments and activities"
+    },
+    "categories": {
+      "all": "All",
+      "award": "Awards",
+      "publication": "Publications",
+      "event": "Events",
+      "other": "Other"
+    },
+    "no_data": "No relevant news available"
+  },
+  "gallery": {
+    "hero": {
+      "title": "Gallery",
+      "description": "Capturing memorable moments of our team"
+    },
+    "categories": {
+      "group_photos": "Group Photos",
+      "conferences": "Conferences",
+      "field_work": "Field Work",
+      "social_events": "Social Events"
+    }
+  },
+  "links": {
+    "hero": {
+      "title": "Related Links",
+      "description": "Academic resources, data platforms, and useful tools"
+    },
+    "sections": {
+      "academic_profiles": "Academic Profiles",
+      "related_websites": "Related Websites",
+      "sar_data_portals": "SAR Data Portals",
+      "insar_tools": "InSAR Processing Tools"
+    },
+    "visit": "Visit"
+  }
+}

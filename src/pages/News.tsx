@@ -5,9 +5,11 @@ import { Calendar, Tag, Image as ImageIcon, ChevronRight } from 'lucide-react';
 import newsData from '@/data/news.json';
 import galleryData from '@/data/gallery.json';
 import { getImageUrl } from '@/lib/imageUtils';
+import { useI18n } from '@/i18n/I18nContext';
 
 const News = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const { t } = useI18n();
 
   const categories = ['all', 'Award', 'Publication', 'Event', 'Other'];
 
@@ -23,8 +25,8 @@ const News = () => {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#003366] mb-4">新闻动态</h1>
-            <p className="text-xl text-gray-600">了解团队的最新进展与活动</p>
+            <h1 className="text-4xl md:text-5xl font-bold text-[#003366] mb-4">{t('news.hero.title')}</h1>
+            <p className="text-xl text-gray-600">{t('news.hero.description')}</p>
           </div>
 
           {/* Category Filter */}
@@ -40,10 +42,10 @@ const News = () => {
                     : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
                 )}
               >
-                {category === 'all' ? '全部' :
-                 category === 'Award' ? '荣誉奖项' :
-                 category === 'Publication' ? '论文发表' :
-                 category === 'Event' ? '团队活动' : '其他'}
+                {category === 'all' ? t('news.categories.all') :
+                 category === 'Award' ? t('news.categories.award') :
+                 category === 'Publication' ? t('news.categories.publication') :
+                 category === 'Event' ? t('news.categories.event') : t('news.categories.other')}
               </button>
             ))}
           </div>
@@ -82,9 +84,9 @@ const News = () => {
                           item.category === 'Event' ? 'bg-green-100 text-green-700' :
                           'bg-gray-100 text-gray-700'
                         )}>
-                          {item.category === 'Publication' ? '论文发表' :
-                           item.category === 'Award' ? '荣誉奖项' :
-                           item.category === 'Event' ? '团队活动' : '其他'}
+                          {item.category === 'Publication' ? t('news.categories.publication') :
+                           item.category === 'Award' ? t('news.categories.award') :
+                           item.category === 'Event' ? t('news.categories.event') : t('news.categories.other')}
                         </span>
                         <span className="text-gray-500 text-sm flex items-center gap-1">
                           <Calendar size={14} />
@@ -104,7 +106,7 @@ const News = () => {
             {filteredNews.length === 0 && (
               <div className="text-center py-16 bg-white rounded-2xl shadow-lg">
                 <Calendar size={48} className="mx-auto text-gray-400 mb-4" />
-                <p className="text-gray-600 text-lg">暂无相关新闻</p>
+                <p className="text-gray-600 text-lg">{t('news.no_data')}</p>
               </div>
             )}
           </div>
@@ -115,8 +117,8 @@ const News = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#003366] mb-4">图片库</h2>
-            <p className="text-xl text-gray-600">记录团队的精彩瞬间</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#003366] mb-4">{t('gallery.hero.title')}</h2>
+            <p className="text-xl text-gray-600">{t('gallery.hero.description')}</p>
           </div>
 
           {/* Gallery Categories */}
@@ -133,9 +135,9 @@ const News = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-[#003366] to-[#C41E3A] flex items-center justify-center">
                   <div className="text-center text-white">
                     <ImageIcon size={48} className="mx-auto mb-3 opacity-80" />
-                    <h3 className="text-xl font-bold">{category === 'Group Photos' ? '团队合影' :
-                                                         category === 'Conferences' ? '学术会议' :
-                                                         category === 'Field Work' ? '野外考察' : '社交活动'}</h3>
+                    <h3 className="text-xl font-bold">{category === 'Group Photos' ? t('gallery.categories.group_photos') :
+                                                         category === 'Conferences' ? t('gallery.categories.conferences') :
+                                                         category === 'Field Work' ? t('gallery.categories.field_work') : t('gallery.categories.social_events')}</h3>
                   </div>
                 </div>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all" />

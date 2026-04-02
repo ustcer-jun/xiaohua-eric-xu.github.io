@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
 import { BookOpen, FileText, Award, ExternalLink } from 'lucide-react';
 import courses from '@/data/courses.json';
+import { useI18n } from '@/i18n/I18nContext';
 
 const Teaching = () => {
+  const { t } = useI18n();
+
   const teachingAchievements = [
     {
       title: '校级教学成果奖',
@@ -54,8 +57,8 @@ const Teaching = () => {
     <div className="min-h-screen bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#003366] mb-4">教学工作</h1>
-          <p className="text-xl text-gray-600">培养下一代地球观测科学家</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-[#003366] mb-4">{t('teaching.hero.title')}</h1>
+          <p className="text-xl text-gray-600">{t('teaching.hero.description')}</p>
         </div>
 
         {/* Courses */}
@@ -64,7 +67,7 @@ const Teaching = () => {
             <div className="w-12 h-12 bg-[#C41E3A] rounded-lg flex items-center justify-center text-white">
               <BookOpen size={24} />
             </div>
-            <h2 className="text-3xl font-bold text-[#003366]">讲授课程</h2>
+            <h2 className="text-3xl font-bold text-[#003366]">{t('teaching.courses.title')}</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -97,7 +100,7 @@ const Teaching = () => {
                       className="inline-flex items-center gap-2 text-[#003366] font-semibold hover:text-[#C41E3A] transition-colors"
                     >
                       <FileText size={18} />
-                      下载教学大纲
+                      {t('teaching.courses.download_syllabus')}
                     </a>
                   )}
                 </div>
@@ -112,10 +115,10 @@ const Teaching = () => {
             <div className="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center text-white">
               <Award size={24} />
             </div>
-            <h2 className="text-3xl font-bold text-[#003366]">教学成就</h2>
+            <h2 className="text-3xl font-bold text-[#003366]">{t('teaching.achievements.title')}</h2>
           </div>
           <div className="text-center py-12">
-            <p className="text-gray-600">暂无教学成就信息，后续将更新。</p>
+            <p className="text-gray-600">{t('teaching.achievements.no_data')}</p>
           </div>
         </section>
 
@@ -125,10 +128,10 @@ const Teaching = () => {
             <div className="w-12 h-12 bg-[#003366] rounded-lg flex items-center justify-center text-white">
               <FileText size={24} />
             </div>
-            <h2 className="text-3xl font-bold text-[#003366]">学生资源</h2>
+            <h2 className="text-3xl font-bold text-[#003366]">{t('teaching.resources.title')}</h2>
           </div>
           <div className="text-center py-12">
-            <p className="text-gray-600">暂无学生资源信息，后续将更新。</p>
+            <p className="text-gray-600">{t('teaching.resources.no_data')}</p>
           </div>
         </section>
       </div>

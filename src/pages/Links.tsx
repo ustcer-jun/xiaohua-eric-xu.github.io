@@ -10,8 +10,11 @@ import {
   Link2,
   Download
 } from 'lucide-react';
+import { useI18n } from '@/i18n/I18nContext';
 
 const Links = () => {
+  const { t } = useI18n();
+
   const academicProfiles = [
     {
       name: 'Google Scholar',
@@ -109,7 +112,7 @@ const Links = () => {
       </h3>
       <p className="text-gray-600 mb-4">{item.description}</p>
       <div className="flex items-center gap-2 text-[#C41E3A] font-semibold">
-        访问 <ExternalLink size={16} />
+        {t('links.visit')} <ExternalLink size={16} />
       </div>
     </motion.a>
   );
@@ -118,8 +121,8 @@ const Links = () => {
     <div className="min-h-screen bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#003366] mb-4">相关链接</h1>
-          <p className="text-xl text-gray-600">学术资源、数据平台与有用工具</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-[#003366] mb-4">{t('links.hero.title')}</h1>
+          <p className="text-xl text-gray-600">{t('links.hero.description')}</p>
         </div>
 
         {/* Academic Profiles */}
@@ -128,7 +131,7 @@ const Links = () => {
             <div className="w-12 h-12 bg-gradient-to-br from-[#003366] to-[#C41E3A] rounded-lg flex items-center justify-center text-white">
               <GraduationCap size={24} />
             </div>
-            <h2 className="text-3xl font-bold text-[#003366]">学术档案</h2>
+            <h2 className="text-3xl font-bold text-[#003366]">{t('links.sections.academic_profiles')}</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {academicProfiles.map((item, index) => (
@@ -147,7 +150,7 @@ const Links = () => {
             <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center text-white">
               <Building size={24} />
             </div>
-            <h2 className="text-3xl font-bold text-[#003366]">相关网站</h2>
+            <h2 className="text-3xl font-bold text-[#003366]">{t('links.sections.related_websites')}</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {relatedWebsites.map((item, index) => (
@@ -166,7 +169,7 @@ const Links = () => {
             <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-lg flex items-center justify-center text-white">
               <Database size={24} />
             </div>
-            <h2 className="text-3xl font-bold text-[#003366]">SAR数据平台</h2>
+            <h2 className="text-3xl font-bold text-[#003366]">{t('links.sections.sar_data_portals')}</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {sarDataPortals.map((item, index) => (
@@ -185,7 +188,7 @@ const Links = () => {
             <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-700 rounded-lg flex items-center justify-center text-white">
               <Code size={24} />
             </div>
-            <h2 className="text-3xl font-bold text-[#003366]">InSAR处理工具</h2>
+            <h2 className="text-3xl font-bold text-[#003366]">{t('links.sections.insar_tools')}</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {insarTools.map((item, index) => (

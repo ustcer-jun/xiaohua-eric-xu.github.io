@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
+import { useI18n } from '@/i18n/I18nContext';
 
 const Footer = () => {
+  const { t } = useI18n();
+
   return (
     <footer className="bg-gradient-to-b from-[#003366] to-[#002244] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -13,11 +16,11 @@ const Footer = () => {
               </div>
               <div>
                 <div className="text-xl font-bold">USTC-InSAR</div>
-                <div className="text-sm text-gray-300">InSAR研究团队</div>
+                <div className="text-sm text-gray-300">InSAR Research Team</div>
               </div>
             </div>
             <p className="text-gray-300 mb-4">
-              致力于InSAR技术研究与应用，推动地球观测科学发展。
+              {t('footer.description')}
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-gray-300 hover:text-white transition-colors">
@@ -33,31 +36,27 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">快速链接</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('footer.quick_links')}</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-300 hover:text-white transition-colors">首页</Link></li>
-              <li><Link to="/team" className="text-gray-300 hover:text-white transition-colors">团队成员</Link></li>
-              <li><Link to="/research" className="text-gray-300 hover:text-white transition-colors">研究成果</Link></li>
-              <li><Link to="/teaching" className="text-gray-300 hover:text-white transition-colors">教学工作</Link></li>
+              <li><Link to="/" className="text-gray-300 hover:text-white transition-colors">{t('header.home')}</Link></li>
+              <li><Link to="/team" className="text-gray-300 hover:text-white transition-colors">{t('header.team')}</Link></li>
+              <li><Link to="/research" className="text-gray-300 hover:text-white transition-colors">{t('header.research')}</Link></li>
+              <li><Link to="/teaching" className="text-gray-300 hover:text-white transition-colors">{t('header.teaching')}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">联系我们</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('footer.contact_us')}</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="mt-0.5 text-gray-300" />
-                <span className="text-gray-300">中国科学技术大学<br />安徽省合肥市</span>
+                <span className="text-gray-300">{t('footer.address')}</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={20} className="text-gray-300" />
-                <a href="mailto:xiaohuaxu@ustc.edu.cn" className="text-gray-300 hover:text-white transition-colors">
-                  xiaohuaxu@ustc.edu.cn
+                <a href="mailto:xiaohua-xu@ustc.edu.cn" className="text-gray-300 hover:text-white transition-colors">
+                  xiaohua-xu@ustc.edu.cn
                 </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone size={20} className="text-gray-300" />
-                <span className="text-gray-300">+86 551 6360 0000</span>
               </li>
             </ul>
           </div>

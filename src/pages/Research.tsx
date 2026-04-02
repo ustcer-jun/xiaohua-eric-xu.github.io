@@ -10,11 +10,13 @@ import {
 } from 'lucide-react';
 import publications from '@/data/publications.json';
 import { getImageUrl } from '@/lib/imageUtils';
+import { useI18n } from '@/i18n/I18nContext';
 
 const Research = () => {
   const [selectedYear, setSelectedYear] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const { t, locale } = useI18n();
 
   const years = ['all', ...new Set(publications.map(p => p.year.toString()))].sort((a, b) => {
     if (a === 'all') return -1;
@@ -34,18 +36,18 @@ const Research = () => {
 
   const researchAreas = [
     {
-      title: 'InSAR技术与应用',
-      description: '我们开发和优化InSAR处理算法，提高形变监测的精度和效率。优化InSAR数据处理流程包括自动化，相位解缠优化算法，时间序列分析等关键技术。',
+      titleKey: 'research.areas.insar.title',
+      descriptionKey: 'research.areas.insar.description',
       image: '/images/research/sentinel-1.png'
     },
     {
-      title: '地震大地测量',
-      description: '利用InSAR数据研究地震的同震形变、震后滑移及地震周期。我们的研究为理解地震机制和地震危险性评估提供重要依据。',
+      titleKey: 'research.areas.earthquake.title',
+      descriptionKey: 'research.areas.earthquake.description',
       image: '/images/research/Ridgecrest.png'
     },
     {
-      title: 'InSAR与AI的交叉运用',
-      description: '将人工智能技术与InSAR数据处理相结合，开发智能解译算法，提高数据处理效率和形变识别精度，探索新的InSAR应用领域。',
+      titleKey: 'research.areas.ai.title',
+      descriptionKey: 'research.areas.ai.description',
       image: '/images/research/AI.png'
     }
   ];
@@ -60,7 +62,7 @@ const Research = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-bold text-white mb-4"
           >
-            研究成果
+            {t('research.hero.title')}
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -68,7 +70,7 @@ const Research = () => {
             transition={{ delay: 0.2 }}
             className="text-xl text-gray-300"
           >
-            我们的研究方向与学术发表
+            {t('research.hero.description')}
           </motion.p>
         </div>
       </section>
@@ -77,8 +79,8 @@ const Research = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#003366] mb-4">研究领域</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">我们专注于以下核心研究方向</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#003366] mb-4">{t('research.areas.title')}</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">{t('research.areas.description')}</p>
           </div>
 
           <div className="space-y-12">
@@ -92,17 +94,17 @@ const Research = () => {
                 className={`grid md:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
               >
                 <div className={index % 2 === 1 ? 'md:order-2' : ''}>
-                  <div className="aspect-video rounded-2xl overflow-hidden shadow-xl">
+                  <div className="rounded-2xl overflow-hidden shadow-xl">
                     <img 
                       src={getImageUrl(area.image)} 
-                      alt={area.title}
-                      className="w-full h-full object-cover"
+                      alt={t(area.titleKey)}
+                      className="w-full h-auto"
                     />
                   </div>
                 </div>
                 <div className={index % 2 === 1 ? 'md:order-1' : ''}>
-                  <h3 className="text-2xl font-bold text-[#003366] mb-4">{area.title}</h3>
-                  <p className="text-gray-700 text-lg leading-relaxed">{area.description}</p>
+                  <h3 className="text-2xl font-bold text-[#003366] mb-4">{t(area.titleKey)}</h3>
+                  <p className="text-gray-700 text-lg leading-relaxed">{t(area.descriptionKey)}</p>
                 </div>
               </motion.div>
             ))}
@@ -114,8 +116,8 @@ const Research = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#003366] mb-4">学术发表</h2>
-            <p className="text-gray-600">我们团队的研究论文发表情况</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#003366] mb-4">{t('research.publications.title')}</h2>
+            <p className="text-gray-600">{t('research.publications.description')}</p>
           </div>
 
           {/* Filters */}
@@ -127,7 +129,7 @@ const Research = () => {
                   <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
                   <input
                     type="text"
-                    placeholder="搜索论文标题、作者或期刊..."
+                    placeholder={t('research.publications.search')}
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#C41E3A] focus:border-transparent outline-none"
@@ -144,7 +146,7 @@ const Research = () => {
                 >
                   {years.map(year => (
                     <option key={year} value={year}>
-                      {year === 'all' ? '全部年份' : year}
+                      {year === 'all' ? t('research.publications.year_filter') : year}
                     </option>
                   ))}
                 </select>
@@ -157,9 +159,9 @@ const Research = () => {
                   onChange={(e) => setSelectedType(e.target.value)}
                   className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#C41E3A] focus:border-transparent outline-none bg-white"
                 >
-                  <option value="all">全部类型</option>
-                  <option value="journal">期刊论文</option>
-                  <option value="conference">会议论文</option>
+                  <option value="all">{t('research.publications.type_filter')}</option>
+                  <option value="journal">{t('research.publications.filters.journal')}</option>
+                  <option value="conference">{t('research.publications.filters.conference')}</option>
                 </select>
               </div>
             </div>
@@ -188,7 +190,7 @@ const Research = () => {
                         'px-3 py-1 rounded-full text-xs font-semibold',
                         pub.type === 'journal' ? 'bg-blue-100 text-blue-700' : 'bg-purple-100 text-purple-700'
                       )}>
-                        {pub.type === 'journal' ? '期刊论文' : '会议论文'}
+                        {pub.type === 'journal' ? t('research.publications.filters.journal') : t('research.publications.filters.conference')}
                       </span>
                       <span className="text-gray-500 text-sm flex items-center gap-1">
                         <Calendar size={14} />
@@ -216,7 +218,9 @@ const Research = () => {
                       )}
                       {pub.pdf && (
                         <a
-                          href={getImageUrl(pub.pdf)}
+                          href={pub.pdf}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg transition-colors text-sm font-medium"
                         >
                           <Download size={16} />
@@ -232,7 +236,7 @@ const Research = () => {
             {filteredPublications.length === 0 && (
               <div className="text-center py-16">
                 <Search size={48} className="mx-auto text-gray-400 mb-4" />
-                <p className="text-gray-600 text-lg">没有找到匹配的论文</p>
+                <p className="text-gray-600 text-lg">{t('research.publications.no_results')}</p>
               </div>
             )}
           </div>

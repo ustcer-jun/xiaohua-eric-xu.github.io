@@ -10,23 +10,26 @@ import {
 } from 'lucide-react';
 import newsData from '@/data/news.json';
 import { getImageUrl } from '@/lib/imageUtils';
+import { useI18n } from '@/i18n/I18nContext';
 
 const Home = () => {
+  const { t } = useI18n();
+
   const researchAreas = [
     {
       icon: <Satellite size={32} />,
-      title: 'InSAR技术与应用',
-      description: '开发先进的合成孔径雷达干涉测量技术，用于高精度地表形变监测。'
+      titleKey: 'home.research_areas.areas.insar.title',
+      descriptionKey: 'home.research_areas.areas.insar.description'
     },
     {
       icon: <AlertTriangle size={32} />,
-      title: '地震大地测量',
-      description: '利用InSAR数据研究地震同震、震后形变及地震周期动力学过程。'
+      titleKey: 'home.research_areas.areas.earthquake.title',
+      descriptionKey: 'home.research_areas.areas.earthquake.description'
     },
     {
       icon: <BookOpen size={32} />,
-      title: '地壳形变研究',
-      description: '研究青藏高原及周边地区的长期地壳形变与构造运动。'
+      titleKey: 'home.research_areas.areas.crustal.title',
+      descriptionKey: 'home.research_areas.areas.crustal.description'
     }
   ];
 
@@ -50,23 +53,23 @@ const Home = () => {
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-4">USTC-InSAR</h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200">
-              中国科学技术大学InSAR研究团队
+              {t('home.hero.subtitle')}
             </p>
             <p className="text-lg md:text-xl mb-10 text-gray-300 max-w-3xl mx-auto">
-              Advanced InSAR Research for Earth Observation · 先进InSAR技术与地球观测研究
+              {t('home.hero.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/research" 
                 className="px-8 py-4 bg-[#C41E3A] hover:bg-[#A01830] text-white rounded-lg font-semibold transition-all transform hover:scale-105 flex items-center justify-center gap-2"
               >
-                查看研究 <ArrowRight size={20} />
+                {t('home.hero.btn_research')} <ArrowRight size={20} />
               </Link>
               <Link 
                 to="/team" 
                 className="px-8 py-4 bg-white/20 hover:bg-white/30 text-white rounded-lg font-semibold backdrop-blur-sm border border-white/30 transition-all flex items-center justify-center gap-2"
               >
-                认识团队 <ArrowRight size={20} />
+                {t('home.hero.btn_team')} <ArrowRight size={20} />
               </Link>
             </div>
           </motion.div>
@@ -83,15 +86,15 @@ const Home = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-[#003366] mb-6">欢迎来到USTC-InSAR研究团队</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#003366] mb-6">{t('home.welcome.title')}</h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                我们是中国科学技术大学地球和空间科学学院的USTC-InSAR团队，由许效华教授领导。
+                {t('home.welcome.paragraph1')}
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                团队致力于InSAR技术的开发与应用，利用卫星雷达数据开展高精度地表形变监测、地震大地测量、火山活动监测及地壳形变研究。
+                {t('home.welcome.paragraph2')}
               </p>
               <p className="text-gray-700 leading-relaxed">
-                我们的研究成果广泛发表于国际顶尖期刊，为地球科学研究和自然灾害预警做出了重要贡献。
+                {t('home.welcome.paragraph3')}
               </p>
             </motion.div>
             <motion.div
@@ -118,9 +121,9 @@ const Home = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#003366] mb-4">研究方向</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#003366] mb-4">{t('home.research_areas.title')}</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              我们专注于以下主要研究领域，推动InSAR技术与地球观测科学的发展
+              {t('home.research_areas.description')}
             </p>
           </div>
 
@@ -138,8 +141,8 @@ const Home = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-[#003366] to-[#C41E3A] rounded-xl flex items-center justify-center text-white mb-6">
                   {area.icon}
                 </div>
-                <h3 className="text-xl font-bold text-[#003366] mb-3">{area.title}</h3>
-                <p className="text-gray-600">{area.description}</p>
+                <h3 className="text-xl font-bold text-[#003366] mb-3">{t(area.titleKey)}</h3>
+                <p className="text-gray-600">{t(area.descriptionKey)}</p>
               </motion.div>
             ))}
           </div>
@@ -151,14 +154,14 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center mb-12">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#003366] mb-2">最新动态</h2>
-              <p className="text-gray-600">了解我们团队的最新进展</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#003366] mb-2">{t('home.news.title')}</h2>
+              <p className="text-gray-600">{t('home.news.description')}</p>
             </div>
             <Link 
               to="/news" 
               className="text-[#C41E3A] font-semibold hover:text-[#A01830] flex items-center gap-2"
             >
-              查看全部 <ArrowRight size={18} />
+              {t('home.news.btn_all')} <ArrowRight size={18} />
             </Link>
           </div>
 
@@ -208,22 +211,22 @@ const Home = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">加入我们</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">{t('home.cta.title')}</h2>
             <p className="text-xl text-gray-300 mb-8">
-              我们热忱欢迎有志于InSAR技术和地球观测研究的优秀学生加入我们的团队！
+              {t('home.cta.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/team" 
                 className="px-8 py-4 bg-[#C41E3A] hover:bg-[#A01830] text-white rounded-lg font-semibold transition-all"
               >
-                了解团队
+                {t('home.cta.btn_team')}
               </Link>
               <Link 
                 to="/research" 
                 className="px-8 py-4 bg-white/20 hover:bg-white/30 text-white rounded-lg font-semibold backdrop-blur-sm border border-white/30 transition-all"
               >
-                查看研究
+                {t('home.cta.btn_research')}
               </Link>
             </div>
           </motion.div>

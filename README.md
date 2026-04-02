@@ -199,43 +199,75 @@ Open `src/data/team-members.json` and add/edit member objects:
 ### 2. Updating Publications
 
 #### Step 1: Add Publication Data
-Open `src/data/publications.json` and add new entries:
+Open `src/data/publications.json` and add new entries. Each publication should include the following fields:
 
 ```json
 {
   "id": 1,
-  "authors": "Xu, X., Sandwell, D. T., et al.",
-  "title": "Coseismic deformation of the 2019 Ridgecrest earthquake sequence from InSAR",
-  "journal": "Geophysical Research Letters",
-  "year": 2020,
-  "doi": "10.1029/2020GL088888",
-  "pdf": "/pdfs/publication-2020.pdf",
+  "authors": "K Wang, X Xu, Y Hu",
+  "title": "Kinematics of the 2023 Kahramanmaraş Earthquake Doublet: Biased Near-Fault Data and Shallow Slip Deficit",
+  "journal": "Seismological Research Letters, 2024",
+  "year": 2024,
+  "doi": "",
+  "pdf": "https://www.researchgate.net/profile/Kai-Wang-481/publication/384111163_Kinematics_of_the_2023_Kahramanmaras_Earthquake_Doublet_Biased_Near-Fault_Data_and_Shallow_Slip_Deficit/links/672e09d2db208342def34016/Kinematics-of-the-2023-Kahramanmaras-Earthquake-Doublet-Biased-Near-Fault-Data-and-Shallow-Slip-Deficit.pdf",
   "type": "journal",
-  "citations": 150
+  "citations": 0
 }
 ```
+
+**Required Fields**:
+- `id`: Unique identifier for the publication (increment this for each new paper)
+- `authors`: List of authors (last name, initials format)
+- `title`: Full title of the paper
+- `journal`: Journal name and publication year
+- `year`: Publication year
+- `type`: Publication type (`journal` or `conference`)
+
+**Optional Fields**:
+- `doi`: DOI link (if available)
+- `pdf`: Direct URL to the PDF file (can be external links)
+- `citations`: Citation count (can be updated periodically)
 
 **Publication Types**:
 - `journal` - Journal articles
 - `conference` - Conference papers
 
-#### Step 2: Import Publications from Google Scholar
-You can import publications from Professor Xu's Google Scholar profile:
+#### Step 2: Adding New Publications
 
-1. **Visit Google Scholar**: https://scholar.google.com/citations?hl=zh-CN&user=ME1EfdsAAAAJ&view_op=list_works&sortby=pubdate
-2. **Copy publication information** for each paper:
+1. **Gather publication information**:
    - Authors
    - Title
-   - Journal
-   - Year
+   - Journal name with volume, issue, and page numbers
+   - Publication year
+   - PDF link (if available)
    - DOI (if available)
-   - Citation count
-3. **Add to publications.json** in the format shown above
 
-#### Step 3: Add PDF Files (Optional)
-- Create `public/pdfs/` folder if needed
-- Upload PDF files
-- Update the `pdf` field with path: `/pdfs/filename.pdf`
+2. **Format the publication entry**:
+   - Follow the JSON format shown above
+   - Use incremental ID numbers
+   - For PDF links, you can use direct external URLs (e.g., from ResearchGate, institutional repositories, or journal websites)
+
+3. **Add the entry to publications.json**:
+   - Open `src/data/publications.json`
+   - Add the new publication object to the array
+   - Ensure the JSON syntax is valid
+
+#### Step 3: Updating Citation Counts
+
+1. **Check Google Scholar** for the latest citation counts:
+   - Visit: https://scholar.google.com/citations?hl=zh-CN&user=ME1EfdsAAAAJ&view_op=list_works&sortby=pubdate
+   - Find the paper and note the citation count
+
+2. **Update the `citations` field** in the corresponding publication entry
+
+#### Step 4: Verifying Publications
+
+After adding new publications:
+1. Run `npm run dev` to start the development server
+2. Navigate to the Research page
+3. Verify the new publication appears in the list
+4. Check that PDF links work correctly
+5. Ensure the publication is properly categorized and searchable
 
 ### 3. Updating News
 
