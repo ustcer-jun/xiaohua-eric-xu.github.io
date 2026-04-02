@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Mail, Globe, User } from 'lucide-react';
 import teamMembers from '@/data/team-members.json';
+import { getImageUrl } from '@/lib/imageUtils';
 
 const Team = () => {
   const categories = [
@@ -44,19 +45,20 @@ const Team = () => {
                     whileHover={{ y: -8, transition: { duration: 0.3 } }}
                     className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all"
                   >
-                    <div className="relative aspect-square bg-gradient-to-br from-gray-100 to-gray-200">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <User size={80} className="text-gray-400" />
-                      </div>
-                      {member.photo && (
+                    <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200">
+                      {member.photo ? (
                         <img 
-                          src={member.photo} 
+                          src={getImageUrl(member.photo)} 
                           alt={member.name}
                           className="w-full h-full object-cover"
                           onError={(e) => {
                             (e.target as HTMLImageElement).style.display = 'none';
                           }}
                         />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
+                          <span className="text-gray-400 font-medium">{member.name.charAt(0)}</span>
+                        </div>
                       )}
                     </div>
                     <div className="p-6">

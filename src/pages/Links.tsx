@@ -7,34 +7,29 @@ import {
   Code,
   GraduationCap,
   Building,
-  Link2
+  Link2,
+  Download
 } from 'lucide-react';
 
 const Links = () => {
   const academicProfiles = [
     {
       name: 'Google Scholar',
-      url: 'https://scholar.google.com/citations?hl=zh-CN&user=ME1EfdsAAAAJ',
+      url: 'https://scholar.google.com/citations?hl=zh-CN&user=ME1EfdsAAAAJ&view_op=list_works&sortby=pubdate',
       icon: <BookOpen size={28} />,
       description: '查看全部学术论文与引用'
     },
     {
-      name: 'ResearchGate',
-      url: 'https://www.researchgate.net/',
-      icon: <Globe size={28} />,
-      description: '科研社交平台与成果分享'
-    },
-    {
-      name: 'ORCID',
-      url: 'https://orcid.org/',
-      icon: <GraduationCap size={28} />,
-      description: '学术作者唯一标识'
-    },
-    {
       name: 'GitHub',
-      url: 'https://github.com/',
+      url: 'https://github.com/Xiaohua-Eric-Xu',
       icon: <Code size={28} />,
       description: '代码仓库与开源项目'
+    },
+    {
+      name: 'GMTSAR Downloads',
+      url: 'https://topex.ucsd.edu/gmtsar/downloads/',
+      icon: <Download size={28} />,
+      description: 'GMTSAR软件下载'
     }
   ];
 
@@ -56,12 +51,6 @@ const Links = () => {
       url: 'http://earthquake.ustc.edu.cn',
       icon: <Database size={28} />,
       description: '地震监测与研究'
-    },
-    {
-      name: '中国科学院测量与地球物理研究所',
-      url: 'http://www.igg.cas.cn',
-      icon: <Globe size={28} />,
-      description: '大地测量研究机构'
     }
   ];
 
@@ -74,7 +63,7 @@ const Links = () => {
     },
     {
       name: 'NASA Alaska Satellite Facility',
-      url: 'https://asf.alaska.edu',
+      url: 'https://search.asf.alaska.edu/#/',
       icon: <Database size={28} />,
       description: 'ASF SAR数据存档'
     },
@@ -83,39 +72,21 @@ const Links = () => {
       url: 'https://earthdata.nasa.gov',
       icon: <Database size={28} />,
       description: 'NASA地球观测数据'
-    },
-    {
-      name: 'Vertex - ASF Data Portal',
-      url: 'https://vertex.daac.asf.alaska.edu',
-      icon: <Database size={28} />,
-      description: 'ASF数据搜索与下载'
     }
   ];
 
   const insarTools = [
     {
+      name: 'GMT',
+      url: 'https://www.generic-mapping-tools.org',
+      icon: <Code size={28} />,
+      description: '通用地图工具集'
+    },
+    {
       name: 'GMTSAR',
       url: 'https://topex.ucsd.edu/gmtsar',
       icon: <Code size={28} />,
       description: 'InSAR处理软件 (基于GMT)'
-    },
-    {
-      name: 'ISCE',
-      url: 'https://github.com/isce-framework/isce2',
-      icon: <Code size={28} />,
-      description: 'InSAR科学计算环境'
-    },
-    {
-      name: 'SNAP',
-      url: 'https://step.esa.int/main/toolboxes/snap',
-      icon: <Code size={28} />,
-      description: 'ESA哨兵应用平台'
-    },
-    {
-      name: 'MintPy',
-      url: 'https://github.com/insarlab/MintPy',
-      icon: <Code size={28} />,
-      description: 'InSAR时间序列分析'
     }
   ];
 

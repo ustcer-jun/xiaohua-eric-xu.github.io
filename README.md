@@ -1,17 +1,16 @@
 # USTC-InSAR Research Group Website
 
-中国科学技术大学 InSAR 研究团队官方网站，由徐小华教授领导。
+## Website Overview
 
-A professional, modern website for the USTC-InSAR research group led by Professor Xiaohua Xu at the University of Science and Technology of China.
+A professional, modern website for the USTC-InSAR research group led by Professor Xiaohua Xu at the University of Science and Technology of China. This website showcases the research group's activities, publications, team members, and educational resources.
 
-## 网站地址 / Live Demo
+**Live Website**: https://xiaohua-eric-xu.github.io/
 
-- **GitHub Pages**: https://xiaohua-eric-xu.github.io/
-- **USTC Server**: http://insar.ustc.edu.cn (待配置)
+## Technology Stack
 
-## Technologies Used
-
-- **Frontend**: React 18.3, TypeScript 5.8, Vite 6.3
+### Frontend Technologies
+- **Framework**: React 18.3 with TypeScript 5.8
+- **Build Tool**: Vite 6.3
 - **Styling**: Tailwind CSS 3.4
 - **Routing**: React Router DOM 7.3
 - **Animations**: Framer Motion 12.38
@@ -19,500 +18,553 @@ A professional, modern website for the USTC-InSAR research group led by Professo
 - **State Management**: Zustand 5.0
 - **Utilities**: clsx, tailwind-merge
 
-## Directory Structure
+### Deployment
+- **Hosting**: GitHub Pages
+- **CI/CD**: GitHub Actions
+- **Build Process**: Automatic deployment on push
+
+## Frontend Directory Structure
 
 ```
 USTC_InSAR/
-├── index.html
+├── .github/workflows/
+│   └── deploy.yml          # GitHub Actions deployment workflow
 ├── src/
-│   ├── components/
-│   │   └── common/
-│   │       ├── Header.tsx
-│   │       └── Footer.tsx
-│   ├── pages/
-│   │   ├── Home.tsx
-│   │   ├── Team.tsx
-│   │   ├── Research.tsx
-│   │   ├── Teaching.tsx
-│   │   ├── News.tsx
-│   │   └── Links.tsx
-│   ├── data/
-│   │   ├── team-members.json
-│   │   ├── publications.json
-│   │   ├── news.json
-│   │   ├── courses.json
-│   │   └── gallery.json
-│   ├── App.tsx
-│   ├── main.tsx
-│   └── index.css
-├── public/
-│   └── images/
-│       └── research/
-│           ├── NISAR.jpg
-│           ├── sentinel-1.png
-│           └── ustcblue.jpg
-├── package.json
-├── vite.config.ts
-├── tailwind.config.js
-├── tsconfig.json
-└── README.md
+│   ├── components/         # Reusable components
+│   │   └── common/         # Common components
+│   │       ├── Header.tsx  # Website header with navigation
+│   │       └── Footer.tsx  # Website footer with contact info
+│   ├── pages/              # Page components
+│   │   ├── Home.tsx        # Home page with hero section
+│   │   ├── Team.tsx        # Team members page
+│   │   ├── Research.tsx    # Research and publications page
+│   │   ├── Teaching.tsx    # Teaching and courses page
+│   │   ├── News.tsx        # News and gallery page
+│   │   └── Links.tsx       # Links and resources page
+│   ├── data/               # Content data files (JSON format)
+│   │   ├── team-members.json  # Team member information
+│   │   ├── publications.json  # Publication list
+│   │   ├── news.json           # News items
+│   │   ├── courses.json        # Teaching courses
+│   │   └── gallery.json        # Gallery albums
+│   ├── lib/                # Utility functions
+│   │   └── imageUtils.ts   # Image URL helper function
+│   ├── App.tsx             # Main application component
+│   ├── main.tsx            # Application entry point
+│   └── index.css           # Global styles
+├── public/                 # Static assets
+│   ├── favicon.svg         # Website favicon
+│   └── images/             # Image files
+│       ├── team/           # Team member photos
+│       ├── gallery/        # Gallery images (organized by year)
+│       │   └── 2024/       # Year-based organization
+│       ├── research/       # Research-related images
+│       ├── news/           # News images
+│       └── logo/           # Logo images
+├── package.json            # Project dependencies
+├── vite.config.ts          # Vite configuration
+├── tailwind.config.js      # Tailwind CSS configuration
+├── tsconfig.json           # TypeScript configuration
+└── README.md               # This documentation
 ```
 
-## Installation & Setup
+## Local Setup Instructions
 
 ### Prerequisites
 - Node.js (v20 or higher)
-- npm or pnpm
+- npm (v10 or higher) or pnpm
+- Git
 
-### Installation Commands
-```bash
-# Clone the repository
-git clone https://github.com/Xiaohua-Eric-Xu/xiaohua-eric-xu.github.io.git
-cd xiaohua-eric-xu.github.io
+### Installation Steps
 
-# Install dependencies
-npm install
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Xiaohua-Eric-Xu/xiaohua-eric-xu.github.io.git
+   cd xiaohua-eric-xu.github.io
+   ```
 
-### Development Server Setup
-```bash
-# Start the development server
-npm run dev
-```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-The application will open at http://localhost:5173/ (or the next available port).
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-### Build Commands
-```bash
-# Build for production
-npm run build
+4. **Access local development server**
+   Open your browser and go to: http://localhost:5173/xiaohua-eric-xu.github.io/
+   
+   **Note**: The URL includes `/xiaohua-eric-xu.github.io/` because of the `base` configuration in `vite.config.ts`.
 
-# Preview the production build
-npm run preview
-```
+5. **Build for production**
+   ```bash
+   npm run build
+   ```
 
----
+6. **Preview production build**
+   ```bash
+   npm run preview
+   ```
 
-## 部署指南 / Deployment Instructions
+## Important: Image Path Handling
 
-### 方式一：GitHub Pages 部署（推荐）
+### Understanding the Base URL
 
-GitHub Pages 是最简单的免费托管方式，适合学术个人主页。
+This project uses a custom `base` path in `vite.config.ts` for GitHub Pages deployment. This means all static asset URLs must be properly prefixed.
 
-#### 步骤 1：创建 GitHub 仓库
+### The `getImageUrl` Helper Function
 
-1. 登录 GitHub 账号：https://github.com/Xiaohua-Eric-Xu
-2. 创建新仓库，仓库名必须为 `xiaohua-eric-xu.github.io`（用户主页方式）
-3. 仓库设置为 Public
+We provide a utility function `getImageUrl()` in `src/lib/imageUtils.ts` to handle image paths correctly:
 
-#### 步骤 2：配置项目
-
-对于**用户主页**（网站地址：`https://xiaohua-eric-xu.github.io/`）：
-
-确保 `vite.config.ts` 中 `base` 设置为 `'/'`：
 ```typescript
-export default defineConfig({
-  base: '/',
-  // ...其他配置
-})
+export const getImageUrl = (path: string): string => {
+  const base = import.meta.env.BASE_URL || '/';
+  return `${base}${path}`.replace(/\/+/g, '/');
+};
 ```
 
-对于**项目页面**（网站地址：`https://xiaohua-eric-xu.github.io/ustc-insar/`）：
+### How to Use Images in Components
 
-修改 `vite.config.ts`：
+**✅ Correct Way** (using `getImageUrl`):
+```tsx
+import { getImageUrl } from '@/lib/imageUtils';
+
+<img 
+  src={getImageUrl('/images/team/xu-xiaohua.jpg')} 
+  alt="Professor Xu"
+/>
+```
+
+**❌ Incorrect Way** (direct path):
+```tsx
+// This will NOT work when deployed to GitHub Pages
+<img 
+  src="/images/team/xu-xiaohua.jpg" 
+  alt="Professor Xu"
+/>
+```
+
+### Image Path Format in JSON Files
+
+In JSON data files, always use paths starting with `/`:
+
+```json
+{
+  "photo": "/images/team/xu-xiaohua.jpg",
+  "image": "/images/gallery/2024/group-1.jpg"
+}
+```
+
+The `getImageUrl()` function will automatically add the correct base prefix.
+
+## Detailed Usage Guide
+
+### 1. Updating Team Members
+
+#### Step 1: Add Team Member Photos
+- Upload photos to `public/images/team/` folder
+- **Filename format**: `lastname-firstname.jpg` (e.g., `xu-xiaohua.jpg`)
+- **Recommended size**: 400x400px, JPG format
+- **Naming convention**: Use lowercase letters and hyphens
+
+#### Step 2: Update Team Data
+Open `src/data/team-members.json` and add/edit member objects:
+
+```json
+{
+  "id": 1,
+  "name": "Xu Xiaohua",
+  "nameEn": "Xiaohua Xu",
+  "position": "Professor",
+  "positionCn": "教授",
+  "category": "professor",
+  "email": "xiaohuaxu@ustc.edu.cn",
+  "research": "InSAR technology and applications, crustal deformation monitoring",
+  "photo": "/images/team/xu-xiaohua.jpg",
+  "homepage": "https://faculty.ustc.edu.cn/xiaohua/",
+  "joinYear": 2010
+}
+```
+
+**Team Categories**:
+- `professor` - Professors (教授)
+- `associate` - Associate Researchers (副研究员)
+- `postdoc` - Postdoctoral Fellows (博士后)
+- `phd` - PhD Students (博士研究生)
+- `master` - Master's Students (硕士研究生)
+- `undergraduate` - Undergraduate Students (本科生)
+
+### 2. Updating Publications
+
+#### Step 1: Add Publication Data
+Open `src/data/publications.json` and add new entries:
+
+```json
+{
+  "id": 1,
+  "authors": "Xu, X., Sandwell, D. T., et al.",
+  "title": "Coseismic deformation of the 2019 Ridgecrest earthquake sequence from InSAR",
+  "journal": "Geophysical Research Letters",
+  "year": 2020,
+  "doi": "10.1029/2020GL088888",
+  "pdf": "/pdfs/publication-2020.pdf",
+  "type": "journal",
+  "citations": 150
+}
+```
+
+**Publication Types**:
+- `journal` - Journal articles
+- `conference` - Conference papers
+
+#### Step 2: Import Publications from Google Scholar
+You can import publications from Professor Xu's Google Scholar profile:
+
+1. **Visit Google Scholar**: https://scholar.google.com/citations?hl=zh-CN&user=ME1EfdsAAAAJ&view_op=list_works&sortby=pubdate
+2. **Copy publication information** for each paper:
+   - Authors
+   - Title
+   - Journal
+   - Year
+   - DOI (if available)
+   - Citation count
+3. **Add to publications.json** in the format shown above
+
+#### Step 3: Add PDF Files (Optional)
+- Create `public/pdfs/` folder if needed
+- Upload PDF files
+- Update the `pdf` field with path: `/pdfs/filename.pdf`
+
+### 3. Updating News
+
+#### Step 1: Add News Images (Optional)
+- Upload images to `public/images/news/`
+- Use descriptive filenames: `paper-2024.jpg`, `award-ceremony.jpg`
+
+#### Step 2: Update News Data
+Open `src/data/news.json` and add new entries:
+
+```json
+[
+  {
+    "id": 1,
+    "date": "2024-04-02",
+    "title": "New paper published in Nature Communications",
+    "category": "Publication",
+    "content": "Our latest research on InSAR time series analysis has been published in Nature Communications. The paper focuses on developing a new algorithm for processing InSAR data with improved accuracy.",
+    "image": "/images/news/paper-2024.jpg"
+  },
+  {
+    "id": 2,
+    "date": "2024-03-15",
+    "title": "Team attends international conference",
+    "category": "Event",
+    "content": "Our research team participated in the 2024 International InSAR Workshop held in Beijing, presenting our latest findings on crustal deformation monitoring.",
+    "image": "/images/news/conference-2024.jpg"
+  }
+]
+```
+
+**News Categories**:
+- `Publication` - Paper publications (论文发表)
+- `Award` - Awards and honors (荣誉奖项)
+- `Event` - Group events and activities (团队活动)
+- `Other` - Other news (其他)
+
+#### Step 3: Adding Detailed Content
+For each news item, you can add more detailed content that will be displayed on the news detail page. The content field can include paragraphs of text describing the news item in detail.
+
+### 4. Updating Gallery
+
+#### Step 1: Organize Gallery Images
+1. **Create year folders** in `public/images/gallery/`:
+   - `public/images/gallery/2024/`
+   - `public/images/gallery/2023/`
+   - etc.
+
+2. **Upload images** to the appropriate year folder
+   - Use descriptive filenames: `group-1.jpg`, `conference-spring.jpg`
+   - Recommended image size: 1200x800px or similar aspect ratio
+   - Supported formats: JPG, PNG
+
+#### Step 2: Update Gallery Data
+Open `src/data/gallery.json` and add new album entries:
+
+```json
+[
+  {
+    "id": 1,
+    "year": 2024,
+    "category": "Group Photos",
+    "title": "Spring 2024 Group Photo",
+    "date": "2024-03-15",
+    "images": [
+      "/images/gallery/2024/group-1.jpg",
+      "/images/gallery/2024/group-2.jpg"
+    ],
+    "description": "Group photo taken during the spring semester meeting"
+  },
+  {
+    "id": 2,
+    "year": 2024,
+    "category": "Conferences",
+    "title": "2024 International InSAR Workshop",
+    "date": "2024-04-10",
+    "images": [
+      "/images/gallery/2024/conference-1.jpg",
+      "/images/gallery/2024/conference-2.jpg",
+      "/images/gallery/2024/conference-3.jpg"
+    ],
+    "description": "Our team at the 2024 International InSAR Workshop in Beijing"
+  }
+]
+```
+
+**Gallery Categories**:
+- `Group Photos` - Group portraits (团队合影)
+- `Conferences` - Conference photos (学术会议)
+- `Field Work` - Field work photos (野外考察)
+- `Social Events` - Social gathering photos (社交活动)
+
+#### Step 3: Viewing Gallery
+Once you've added the images and updated the gallery.json file, the gallery will be visible on the News & Gallery page. Clicking on an album will take you to the album detail page where you can view all images in the album with navigation controls.
+
+### 5. Updating Teaching Information
+
+#### Step 1: Updating Courses
+Open `src/data/courses.json`:
+
+```json
+{
+  "id": 1,
+  "name": "Satellite Remote Sensing and Earth Observation",
+  "nameEn": "Satellite Remote Sensing and Earth Observation",
+  "code": "ESP501",
+  "semester": "Spring 2024",
+  "description": "Introduction to satellite remote sensing techniques.",
+  "syllabus": "/pdfs/syllabus-esp501.pdf"
+}
+```
+
+#### Step 2: Updating Teaching Achievements
+Open `src/pages/Teaching.tsx` and update the `teachingAchievements` array:
+
 ```typescript
-export default defineConfig({
-  base: '/ustc-insar/',
-  // ...其他配置
-})
+const teachingAchievements = [
+  {
+    title: '校级教学成果奖',
+    description: '2023年获得中国科学技术大学校级教学成果二等奖',
+    year: 2023
+  },
+  // Add more achievements here
+];
 ```
 
-#### 步骤 3：推送代码到 GitHub
+#### Step 3: Updating Student Resources
+Open `src/pages/Teaching.tsx` and update the `studentResources` array:
+
+```typescript
+const studentResources = [
+  {
+    category: '推荐读物',
+    items: [
+      'Synthetic Aperture Radar Interferometry - Rosen et al.',
+      // Add more books here
+    ]
+  },
+  // Add more resource categories here
+];
+```
+
+### 6. Replacing Website Images
+
+#### Hero Section Background
+1. Upload new image to `public/images/research/`
+2. The image is automatically loaded via `getImageUrl('/images/research/ustcblue.jpg')`
+
+#### Research Section Images
+1. Upload to `public/images/research/`
+2. Images are defined in `src/pages/Research.tsx` in the `researchAreas` array
+
+#### Logo Replacement
+1. Upload logo to `public/images/logo/`
+2. Edit `src/components/common/Header.tsx`:
+
+```tsx
+<img 
+  src={getImageUrl('/images/logo/ustc-insar-logo.png')} 
+  alt="USTC-InSAR" 
+  className="h-12"
+/>
+```
+
+## Deployment Workflow
+
+### Step 1: Make Changes Locally
+1. Update data files or images as described above
+2. Test changes with `npm run dev`
+3. Verify all images load correctly in the browser
+
+### Step 2: Commit and Push Changes
 
 ```bash
-# 初始化 Git 仓库（如果还没有）
-git init
+# Check what changed
+git status
 
-# 添加所有文件
+# Stage all changes
 git add .
 
-# 提交更改
+# Commit with descriptive message
+git commit -m "Update: Add new team member photos and publications"
+
+# Push to GitHub
+git push origin main
+```
+
+### Step 3: Automatic Deployment
+- GitHub Actions will automatically build and deploy
+- Deployment takes 1-3 minutes
+- Check status at: https://github.com/Xiaohua-Eric-Xu/xiaohua-eric-xu.github.io/actions
+
+### Step 4: Verify Deployment
+- Visit: https://xiaohua-eric-xu.github.io/
+- Clear browser cache if changes don't appear
+- Check that all images load correctly
+
+## Uploading to a New GitHub Repository
+
+### Step 1: Create a New Repository
+1. Go to GitHub: https://github.com/new
+2. Create a new repository with the name `xiaohua-eric-xu.github.io`
+3. Make sure the repository is public
+4. Do not initialize with README.md or other files
+
+### Step 2: Initialize Git in Your Project
+```bash
+# Navigate to your project directory
+cd /path/to/USTC_InSAR
+
+# Initialize git (if not already initialized)
+git init
+
+# Add all files
+git add .
+
+# Commit initial files
 git commit -m "Initial commit: USTC-InSAR website"
+```
 
-# 添加远程仓库
-git remote add origin https://github.com/Xiaohua-Eric-Xu/xiaohua-eric-xu.github.io.git
+### Step 3: Add Remote Repository
+```bash
+# Add the new GitHub repository as remote
+git remote add origin https://github.com/your-username/xiaohua-eric-xu.github.io.git
 
-# 推送到 GitHub
-git branch -M main
+# Push to the new repository
 git push -u origin main
 ```
 
-#### 步骤 4：启用 GitHub Pages
-
-1. 进入仓库页面：https://github.com/Xiaohua-Eric-Xu/xiaohua-eric-xu.github.io
-2. 点击 **Settings**（设置）
-3. 左侧菜单找到 **Pages**
-4. 在 **Source** 部分：
-   - Branch: 选择 `main`
-   - Folder: 选择 `/ (root)`
-5. 点击 **Save**
-6. 等待几分钟，网站将自动部署
-
-#### 步骤 5：访问网站
-
-部署完成后，访问：**https://xiaohua-eric-xu.github.io/**
-
-#### 自动部署（使用 GitHub Actions）
-
-创建 `.github/workflows/deploy.yml` 文件实现自动部署：
-
-```yaml
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches: [main]
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './dist'
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
-```
-
----
-
-### 方式二：USTC 服务器部署
-
-将网站部署到中国科学技术大学服务器。
-
-#### 步骤 1：构建项目
-
-```bash
-# 在本地构建项目
-npm run build
-```
-
-构建完成后会生成 `dist/` 文件夹。
-
-#### 步骤 2：连接服务器
-
-```bash
-# SSH 连接到 USTC 服务器
-ssh username@insar.ustc.edu.cn
-
-# 或通过 USTC VPN 连接
-```
-
-#### 步骤 3：上传文件
-
-方式 A：使用 SCP
-```bash
-# 在本地执行，上传 dist 文件夹内容到服务器
-scp -r dist/* username@insar.ustc.edu.cn:/var/www/html/insar/
-```
-
-方式 B：使用 SFTP（推荐）
-```bash
-# 使用 FileZilla 或其他 SFTP 客户端
-# 服务器地址：insar.ustc.edu.cn
-# 上传 dist/ 文件夹内所有文件到 /var/www/html/insar/
-```
-
-#### 步骤 4：配置服务器权限
-
-```bash
-# SSH 登录服务器后执行
-sudo chmod 755 -R /var/www/html/insar
-sudo chown -R www-data:www-data /var/www/html/insar
-```
-
-#### 步骤 5：配置 Nginx（如果需要）
-
-```nginx
-# /etc/nginx/sites-available/insar.ustc.edu.cn
-server {
-    listen 80;
-    server_name insar.ustc.edu.cn;
-    root /var/www/html/insar;
-    index index.html;
-
-    location / {
-        try_files $uri $uri/ /index.html;
-    }
-}
-```
-
-```bash
-# 启用配置
-sudo ln -s /etc/nginx/sites-available/insar.ustc.edu.cn /etc/nginx/sites-enabled/
-sudo nginx -t
-sudo systemctl reload nginx
-```
-
-#### 访问地址
-
-部署完成后访问：**http://insar.ustc.edu.cn**
-
----
-
-### 方式三：Netlify 部署
-
-Netlify 提供免费的静态网站托管，支持自动部署。
-
-#### 方式 A：拖拽部署（最简单）
-
-1. 构建项目：`npm run build`
-2. 访问 https://app.netlify.com/
-3. 将 `dist/` 文件夹直接拖拽到页面中
-4. 等待部署完成，获得免费域名
-
-#### 方式 B：连接 GitHub 自动部署
-
-1. 访问 https://app.netlify.com/
-2. 点击 **Add new site** > **Import an existing project**
-3. 选择 **GitHub**，授权 Netlify 访问你的仓库
-4. 选择 `xiaohua-eric-xu.github.io` 仓库
-5. 配置构建设置：
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-6. 点击 **Deploy site**
-7. 等待部署完成
-
-#### 自定义域名
-
-1. 在 Netlify 项目设置中点击 **Domain settings**
-2. 点击 **Add custom domain**
-3. 输入你的域名（如 `insar.ustc.edu.cn`）
-4. 按照提示配置 DNS 记录
-
----
-
-### 方式四：Vercel 部署
-
-Vercel 是另一个优秀的免费托管平台，部署速度极快。
-
-#### 步骤 1：安装 Vercel CLI（可选）
-
-```bash
-npm install -g vercel
-```
-
-#### 步骤 2：部署
-
-方式 A：使用 CLI
-```bash
-# 在项目根目录执行
-vercel
-
-# 首次使用需要登录，按提示操作即可
-# 部署完成后会获得一个 .vercel.app 域名
-```
-
-方式 B：使用网页界面
-1. 访问 https://vercel.com/
-2. 使用 GitHub 账号登录
-3. 点击 **Add New** > **Project**
-4. 选择 GitHub 仓库 `xiaohua-eric-xu.github.io`
-5. Vercel 会自动检测 Vite 项目，使用默认配置即可
-6. 点击 **Deploy**
-7. 等待部署完成
-
-#### 自定义域名
-
-1. 在 Vercel 项目设置中点击 **Domains**
-2. 添加自定义域名
-3. 配置 DNS 记录
-
----
-
-### 方式五：Cloudflare Pages 部署
-
-Cloudflare Pages 提供全球 CDN 加速，访问速度快。
-
-#### 步骤 1：登录 Cloudflare
-
-1. 访问 https://pages.cloudflare.com/
-2. 使用 GitHub 账号登录
-
-#### 步骤 2：创建项目
-
-1. 点击 **Create a project**
-2. 选择 **Connect to Git**
-3. 授权并选择 GitHub 仓库
-4. 配置构建设置：
-   - Framework preset: Vite
-   - Build command: `npm run build`
-   - Build output directory: `dist`
-5. 点击 **Save and Deploy**
-
-#### 访问地址
-
-部署完成后获得 `项目名.pages.dev` 域名。
-
----
-
-## 部署平台对比
-
-| 平台 | 免费额度 | 自定义域名 | CDN 加速 | 自动部署 | 推荐指数 |
-|------|---------|-----------|---------|---------|---------|
-| GitHub Pages | ✅ 无限 | ✅ | ✅ | ✅ | ⭐⭐⭐⭐⭐ |
-| Netlify | ✅ 100GB/月 | ✅ | ✅ | ✅ | ⭐⭐⭐⭐⭐ |
-| Vercel | ✅ 100GB/月 | ✅ | ✅ | ✅ | ⭐⭐⭐⭐⭐ |
-| Cloudflare Pages | ✅ 无限 | ✅ | ✅ 全球 | ✅ | ⭐⭐⭐⭐ |
-| USTC Server | 学校提供 | ✅ | ❌ | ❌ | ⭐⭐⭐ |
-
----
-
-## Content Update Guide
-
-### How to Update Team Members
-1. Open `src/data/team-members.json`
-2. Add a new member object:
-```json
-{
-  "id": 6,
-  "name": "张三",
-  "nameEn": "San Zhang",
-  "position": "PhD Student",
-  "positionCn": "博士研究生",
-  "category": "phd",
-  "email": "zhangsan@mail.ustc.edu.cn",
-  "research": "InSAR time series analysis",
-  "photo": "/images/team/zhangsan.jpg",
-  "homepage": "",
-  "joinYear": 2024
-}
-```
-3. Upload the photo to `public/images/team/` folder
-4. Refresh the website
-
-### How to Add Publications
-1. Open `src/data/publications.json`
-2. Add a new publication:
-```json
-{
-  "id": 6,
-  "authors": "Xu, X., Sandwell, D. T., et al.",
-  "title": "Paper Title Here",
-  "journal": "Journal Name",
-  "year": 2024,
-  "doi": "10.1029/2024GLXXXXXX",
-  "pdf": "",
-  "type": "journal",
-  "citations": 15
-}
-```
-3. Update Google Scholar data periodically
-
-### How to Add News
-1. Open `src/data/news.json`
-2. Add a news item:
-```json
-{
-  "id": 5,
-  "date": "2024-04-02",
-  "title": "New paper published in GRL",
-  "category": "Publication",
-  "content": "Brief description...",
-  "image": ""
-}
-```
-
-### How to Update Gallery
-1. Upload images to `public/images/gallery/[year]/` folder
-2. Update `src/data/gallery.json`:
-```json
-{
-  "id": 2,
-  "year": 2024,
-  "category": "Group Photos",
-  "title": "Summer 2024 Group Photo",
-  "date": "2024-06-15",
-  "images": [
-    "/images/gallery/2024/group-2.jpg"
-  ],
-  "description": "Description here"
-}
-```
-
-### How to Modify Colors/Theme
-1. The theme is currently using USTC Red (#C41E3A) and USTC Blue (#003366)
-2. To change colors, update the relevant Tailwind classes in the component files
-3. For a more systematic approach, you can extend the Tailwind theme in `tailwind.config.js`
-
-## Customization Guide
-
-### How to Change Logo
-- The logo is currently a text-based logo in `src/components/common/Header.tsx`
-- To replace with an image logo:
-  1. Add your logo image to `public/images/logo/`
-  2. Update the Header component to use an `<img>` tag instead of the text logo
-
-### How to Modify Navigation Menu
-- Edit the `navLinks` array in `src/components/common/Header.tsx`
-
-### How to Add New Pages
-1. Create a new page component in `src/pages/`
-2. Add a new route in `src/App.tsx`
-3. Add a link to the navigation menu in `Header.tsx`
-
-### How to Update Contact Information
-- Edit the contact details in `src/components/common/Footer.tsx`
-
-### How to Change Social Media Links
-- Update the social media icons and links in `src/components/common/Footer.tsx`
+### Step 4: Enable GitHub Pages
+1. Go to your repository on GitHub
+2. Click on "Settings" tab
+3. Scroll down to "Pages" section
+4. Under "Source", select "main" branch and "root" directory
+5. Click "Save"
+6. Wait a few minutes for GitHub to build and deploy the site
+
+### Step 5: Verify Deployment
+- Visit: https://your-username.github.io/xiaohua-eric-xu.github.io/
+- Note: If you're using the exact repository name `xiaohua-eric-xu.github.io`, the site will be available at https://xiaohua-eric-xu.github.io/
+
+## Creating a Pull Request
+
+If you're working on a forked repository and want to submit changes to the original repository:
+
+### Step 1: Fork the Repository
+1. Go to the original repository: https://github.com/Xiaohua-Eric-Xu/xiaohua-eric-xu.github.io
+2. Click on "Fork" button in the top right corner
+3. This will create a copy of the repository under your GitHub account
+
+### Step 2: Make Changes
+1. Clone your forked repository
+2. Make the necessary changes
+3. Commit and push the changes to your forked repository
+
+### Step 3: Create Pull Request
+1. Go to your forked repository on GitHub
+2. Click on "Pull requests" tab
+3. Click on "New pull request" button
+4. Select the base repository (original) and branch
+5. Select your forked repository and branch with changes
+6. Add a descriptive title and comment explaining your changes
+7. Click "Create pull request"
+
+### Step 4: Wait for Review
+- The repository maintainer will review your changes
+- They may request additional changes or approve the pull request
+- Once approved, your changes will be merged into the original repository
 
 ## Troubleshooting
 
-### Common Issues and Solutions
-- **Images not loading**: Make sure images are placed in the `public/` directory and paths are correct
-- **Styles not applying**: Check Tailwind CSS configuration and ensure all files are included in the content array
-- **JavaScript errors**: Use browser dev tools to check console logs for details
-- **Build errors**: Run `npm run check` to identify TypeScript errors
-- **GitHub Pages 404**: Check that `base` in `vite.config.ts` matches your repository name
-- **路由刷新 404**: 对于 SPA 应用，需要配置服务器重定向所有请求到 `index.html`
+### Images Not Loading
+
+**Problem**: Images show as broken or 404 errors
+
+**Solutions**:
+1. **Check file path**: Ensure path in JSON starts with `/`
+2. **Verify file exists**: Check `public/images/` folder
+3. **Use getImageUrl**: Always use `getImageUrl()` for image sources
+4. **Check file extension**: Ensure `.jpg` vs `.png` matches
+
+### Development Server Issues
+
+**Problem**: `npm run dev` not working
+
+**Solutions**:
+1. Run `npm install` to ensure dependencies are installed
+2. Check Node.js version: `node --version` (should be v20+)
+3. Delete `node_modules` and run `npm install` again
+
+### Build Errors
+
+**Problem**: `npm run build` fails
+
+**Solutions**:
+1. Check TypeScript errors: `npm run check`
+2. Verify all imports are correct
+3. Ensure all JSON files have valid syntax
+
+### Deployment Issues
+
+**Problem**: GitHub Pages shows 404
+
+**Solutions**:
+1. Check GitHub Actions completed successfully
+2. Verify `base` in `vite.config.ts` matches repository name
+3. Wait a few minutes for GitHub Pages to update
 
 ## Maintenance Schedule
 
-- **Update publications**: Monthly
-- **Update team members**: As needed
-- **Update news**: Weekly
-- **Backup data**: Monthly
-- **Security updates**: Quarterly
+### Weekly
+- Update news items
+- Check for new publications
+
+### Monthly
+- Update team member information
+- Add new publications with citation counts
+- Backup `src/data/` folder
+
+### Quarterly
+- Update gallery with new photos
+- Update course information for new semesters
+- Run `npm update` for security patches
 
 ## Contact & Support
 
-For questions or support, please contact the development team or Professor Xiaohua Xu at xiaohuaxu@ustc.edu.cn.
+For questions or support:
+- Professor Xiaohua Xu: xiaohuaxu@ustc.edu.cn
+- GitHub Issues: https://github.com/Xiaohua-Eric-Xu/xiaohua-eric-xu.github.io/issues
 
 ## License
 

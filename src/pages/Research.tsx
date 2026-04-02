@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Search, 
-  Filter, 
   FileText, 
   ExternalLink, 
   Download,
@@ -10,6 +9,7 @@ import {
   Quote
 } from 'lucide-react';
 import publications from '@/data/publications.json';
+import { getImageUrl } from '@/lib/imageUtils';
 
 const Research = () => {
   const [selectedYear, setSelectedYear] = useState('all');
@@ -35,18 +35,18 @@ const Research = () => {
   const researchAreas = [
     {
       title: 'InSAR技术与应用',
-      description: '我们开发和优化InSAR处理算法，提高形变监测的精度和效率。研究包括大气延迟校正、相位解缠、时间序列分析等关键技术。',
+      description: '我们开发和优化InSAR处理算法，提高形变监测的精度和效率。优化InSAR数据处理流程包括自动化，相位解缠优化算法，时间序列分析等关键技术。',
       image: '/images/research/sentinel-1.png'
     },
     {
       title: '地震大地测量',
       description: '利用InSAR数据研究地震的同震形变、震后滑移及地震周期。我们的研究为理解地震机制和地震危险性评估提供重要依据。',
-      image: '/images/research/NISAR.jpg'
+      image: '/images/research/Ridgecrest.png'
     },
     {
-      title: '火山形变监测',
-      description: '通过持续监测火山地表形变，研究岩浆活动过程，为火山喷发预警提供科学支持。我们监测全球多个活火山的活动状态。',
-      image: '/images/research/ustcblue.jpg'
+      title: 'InSAR与AI的交叉运用',
+      description: '将人工智能技术与InSAR数据处理相结合，开发智能解译算法，提高数据处理效率和形变识别精度，探索新的InSAR应用领域。',
+      image: '/images/research/AI.png'
     }
   ];
 
@@ -94,7 +94,7 @@ const Research = () => {
                 <div className={index % 2 === 1 ? 'md:order-2' : ''}>
                   <div className="aspect-video rounded-2xl overflow-hidden shadow-xl">
                     <img 
-                      src={area.image} 
+                      src={getImageUrl(area.image)} 
                       alt={area.title}
                       className="w-full h-full object-cover"
                     />
@@ -216,7 +216,7 @@ const Research = () => {
                       )}
                       {pub.pdf && (
                         <a
-                          href={pub.pdf}
+                          href={getImageUrl(pub.pdf)}
                           className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg transition-colors text-sm font-medium"
                         >
                           <Download size={16} />

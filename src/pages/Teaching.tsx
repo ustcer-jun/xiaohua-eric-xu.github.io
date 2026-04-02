@@ -114,24 +114,8 @@ const Teaching = () => {
             </div>
             <h2 className="text-3xl font-bold text-[#003366]">教学成就</h2>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {teachingAchievements.map((achievement, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center p-6"
-              >
-                <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
-                  {achievement.year}
-                </div>
-                <h3 className="text-xl font-bold text-[#003366] mb-2">{achievement.title}</h3>
-                <p className="text-gray-600">{achievement.description}</p>
-              </motion.div>
-            ))}
+          <div className="text-center py-12">
+            <p className="text-gray-600">暂无教学成就信息，后续将更新。</p>
           </div>
         </section>
 
@@ -143,28 +127,8 @@ const Teaching = () => {
             </div>
             <h2 className="text-3xl font-bold text-[#003366]">学生资源</h2>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {studentResources.map((section, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-lg p-8"
-              >
-                <h3 className="text-xl font-bold text-[#C41E3A] mb-4">{section.category}</h3>
-                <ul className="space-y-3">
-                  {section.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-gray-700">
-                      <span className="w-1.5 h-1.5 bg-[#C41E3A] rounded-full mt-2 flex-shrink-0"></span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
+          <div className="text-center py-12">
+            <p className="text-gray-600">暂无学生资源信息，后续将更新。</p>
           </div>
         </section>
       </div>

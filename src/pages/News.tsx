@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, Tag, Image as ImageIcon, ChevronRight } from 'lucide-react';
 import newsData from '@/data/news.json';
 import galleryData from '@/data/gallery.json';
+import { getImageUrl } from '@/lib/imageUtils';
 
 const News = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -49,49 +51,54 @@ const News = () => {
           {/* News List */}
           <div className="space-y-6">
             {filteredNews.map((item, index) => (
-              <motion.div
+              <Link
                 key={item.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all group"
+                to={`/news/${item.id}`}
+                className="block"
               >
-                <div className="md:flex">
-                  {item.image && (
-                    <div className="md:w-64 flex-shrink-0">
-                      <img 
-                        src={item.image} 
-                        alt={item.title}
-                        className="w-full h-48 md:h-full object-cover"
-                      />
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all group cursor-pointer"
+                >
+                  <div className="md:flex">
+                    {item.image && (
+                      <div className="md:w-64 flex-shrink-0">
+                        <img 
+                          src={getImageUrl(item.image)} 
+                          alt={item.title}
+                          className="w-full h-48 md:h-full object-cover"
+                        />
+                      </div>
+                    )}
+                    <div className="p-8 flex-1">
+                      <div className="flex items-center gap-3 mb-4">
+                        <span className={cn(
+                          'px-3 py-1 rounded-full text-xs font-semibold',
+                          item.category === 'Publication' ? 'bg-blue-100 text-blue-700' :
+                          item.category === 'Award' ? 'bg-yellow-100 text-yellow-700' :
+                          item.category === 'Event' ? 'bg-green-100 text-green-700' :
+                          'bg-gray-100 text-gray-700'
+                        )}>
+                          {item.category === 'Publication' ? '论文发表' :
+                           item.category === 'Award' ? '荣誉奖项' :
+                           item.category === 'Event' ? '团队活动' : '其他'}
+                        </span>
+                        <span className="text-gray-500 text-sm flex items-center gap-1">
+                          <Calendar size={14} />
+                          {item.date}
+                        </span>
+                      </div>
+                      <h3 className="text-2xl font-bold text-[#003366] mb-3 group-hover:text-[#C41E3A] transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 text-lg leading-relaxed">{item.content}</p>
                     </div>
-                  )}
-                  <div className="p-8 flex-1">
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className={cn(
-                        'px-3 py-1 rounded-full text-xs font-semibold',
-                        item.category === 'Publication' ? 'bg-blue-100 text-blue-700' :
-                        item.category === 'Award' ? 'bg-yellow-100 text-yellow-700' :
-                        item.category === 'Event' ? 'bg-green-100 text-green-700' :
-                        'bg-gray-100 text-gray-700'
-                      )}>
-                        {item.category === 'Publication' ? '论文发表' :
-                         item.category === 'Award' ? '荣誉奖项' :
-                         item.category === 'Event' ? '团队活动' : '其他'}
-                      </span>
-                      <span className="text-gray-500 text-sm flex items-center gap-1">
-                        <Calendar size={14} />
-                        {item.date}
-                      </span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-[#003366] mb-3 group-hover:text-[#C41E3A] transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-600 text-lg leading-relaxed">{item.content}</p>
                   </div>
-                </div>
-              </motion.div>
+                </motion.div>
+              </Link>
             ))}
 
             {filteredNews.length === 0 && (
@@ -145,35 +152,41 @@ const News = () => {
               <h3 className="text-2xl font-bold text-[#003366] mb-6">最新相册</h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {galleryData.map((item, index) => (
-                  <motion.div
+                  <Link
                     key={item.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all"
+                    to={`/gallery/${item.id}`}
+                    className="block"
                   >
-                    {item.images.length > 0 && (
-                      <div className="aspect-video relative">
-                        <img 
-                          src={item.images[0]} 
-                          alt={item.title}
-                          className="w-full h-full object-cover"
-                        />
-                        <div className="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm">
-                          {item.images.length} 张
+                    <motion.div
+                      key={item.id}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all cursor-pointer"
+                    >
+                      {item.images.length > 0 && (
+                        <div className="aspect-video relative">
+                          <img 
+                            src={getImageUrl(item.images[0])} 
+                            alt={item.title}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm">
+                            {item.images.length} 张
+                          </div>
                         </div>
+                      )}
+                      <div className="p-6">
+                        <div className="flex items-center justify-between mb-3">
+                          <span className="text-[#C41E3A] font-semibold text-sm">{item.year}</span>
+                          <span className="text-gray-500 text-sm">{item.date}</span>
+                        </div>
+                        <h4 className="text-lg font-bold text-[#003366] mb-2">{item.title}</h4>
+                        <p className="text-gray-600">{item.description}</p>
                       </div>
-                    )}
-                    <div className="p-6">
-                      <div className="flex items-center justify-between mb-3">
-                        <span className="text-[#C41E3A] font-semibold text-sm">{item.year}</span>
-                        <span className="text-gray-500 text-sm">{item.date}</span>
-                      </div>
-                      <h4 className="text-lg font-bold text-[#003366] mb-2">{item.title}</h4>
-                      <p className="text-gray-600">{item.description}</p>
-                    </div>
-                  </motion.div>
+                    </motion.div>
+                  </Link>
                 ))}
               </div>
             </div>

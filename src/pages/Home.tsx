@@ -6,11 +6,10 @@ import {
   Mountain, 
   BookOpen,
   ArrowRight,
-  Calendar,
-  Award,
-  FileText
+  Calendar
 } from 'lucide-react';
 import newsData from '@/data/news.json';
+import { getImageUrl } from '@/lib/imageUtils';
 
 const Home = () => {
   const researchAreas = [
@@ -25,11 +24,6 @@ const Home = () => {
       description: '利用InSAR数据研究地震同震、震后形变及地震周期动力学过程。'
     },
     {
-      icon: <Mountain size={32} />,
-      title: '火山形变监测',
-      description: '监测火山活动引起的地表形变，为火山喷发预警提供科学依据。'
-    },
-    {
       icon: <BookOpen size={32} />,
       title: '地壳形变研究',
       description: '研究青藏高原及周边地区的长期地壳形变与构造运动。'
@@ -42,7 +36,7 @@ const Home = () => {
       <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="/images/research/ustcblue.jpg" 
+            src={getImageUrl('/images/research/ustcblue.jpg')} 
             alt="USTC Campus" 
             className="w-full h-full object-cover opacity-30"
           />
@@ -91,7 +85,7 @@ const Home = () => {
             >
               <h2 className="text-3xl md:text-4xl font-bold text-[#003366] mb-6">欢迎来到USTC-InSAR研究团队</h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                我们是中国科学技术大学地球和空间科学学院的InSAR（合成孔径雷达干涉测量）研究团队，由徐小华教授领导。
+                我们是中国科学技术大学地球和空间科学学院的USTC-InSAR团队，由许效华教授领导。
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
                 团队致力于InSAR技术的开发与应用，利用卫星雷达数据开展高精度地表形变监测、地震大地测量、火山活动监测及地壳形变研究。
@@ -109,7 +103,7 @@ const Home = () => {
             >
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/images/research/NISAR.jpg" 
+                  src={getImageUrl('/images/research/NISAR.jpg')} 
                   alt="NISAR Satellite" 
                   className="w-full h-full object-cover"
                 />

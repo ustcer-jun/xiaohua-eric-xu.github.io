@@ -6,11 +6,13 @@ import Team from "@/pages/Team";
 import Research from "@/pages/Research";
 import Teaching from "@/pages/Teaching";
 import News from "@/pages/News";
+import NewsDetail from "@/pages/NewsDetail";
+import GalleryDetail from "@/pages/GalleryDetail";
 import Links from "@/pages/Links";
 
 export default function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">
@@ -20,6 +22,8 @@ export default function App() {
             <Route path="/research" element={<Research />} />
             <Route path="/teaching" element={<Teaching />} />
             <Route path="/news" element={<News />} />
+            <Route path="/news/:id" element={<NewsDetail />} />
+            <Route path="/gallery/:id" element={<GalleryDetail />} />
             <Route path="/links" element={<Links />} />
           </Routes>
         </main>
