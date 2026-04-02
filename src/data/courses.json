@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "卫星遥感与地球观测",
+    "nameEn": "Satellite Remote Sensing and Earth Observation",
+    "code": "ESP501",
+    "semester": "Spring 2024",
+    "description": "Introduction to satellite remote sensing techniques with a focus on InSAR technology and its applications in earth science.",
+    "syllabus": ""
+  },
+  {
+    "id": 2,
+    "name": "地震大地测量学",
+    "nameEn": "Earthquake Geodesy",
+    "code": "ESP602",
+    "semester": "Fall 2023",
+    "description": "Advanced course on using geodetic techniques to study earthquakes and crustal deformation.",
+    "syllabus": ""
+  }
+]

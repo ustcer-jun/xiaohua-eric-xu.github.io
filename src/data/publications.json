@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "authors": "Xu, X., Sandwell, D. T., et al.",
+    "title": "Coseismic deformation of the 2019 Ridgecrest earthquake sequence from InSAR",
+    "journal": "Geophysical Research Letters",
+    "year": 2020,
+    "doi": "10.1029/2020GLXXXXXX",
+    "pdf": "",
+    "type": "journal",
+    "citations": 150
+  },
+  {
+    "id": 2,
+    "authors": "Xu, X., et al.",
+    "title": "Long-term crustal deformation in Tibet from InSAR time series",
+    "journal": "Journal of Geophysical Research",
+    "year": 2021,
+    "doi": "10.1029/2021JBXXXXXX",
+    "pdf": "",
+    "type": "journal",
+    "citations": 100
+  },
+  {
+    "id": 3,
+    "authors": "Xu, X., et al.",
+    "title": "Volcano deformation monitoring using Sentinel-1 InSAR data",
+    "journal": "Remote Sensing of Environment",
+    "year": 2022,
+    "doi": "10.1016/j.rse.2022.XXXXXX",
+    "pdf": "",
+    "type": "journal",
+    "citations": 80
+  },
+  {
+    "id": 4,
+    "authors": "Xu, X., et al.",
+    "title": "Advances in InSAR technology for earth observation",
+    "journal": "IEEE International Geoscience and Remote Sensing Symposium",
+    "year": 2023,
+    "doi": "10.1109/IGARSSXXXXXX",
+    "pdf": "",
+    "type": "conference",
+    "citations": 30
+  },
+  {
+    "id": 5,
+    "authors": "Xu, X., et al.",
+    "title": "Rapid earthquake response using near-real-time InSAR",
+    "journal": "Nature Communications",
+    "year": 2024,
+    "doi": "10.1038/s41467-024-XXXXXX",
+    "pdf": "",
+    "type": "journal",
+    "citations": 25
+  }
+]

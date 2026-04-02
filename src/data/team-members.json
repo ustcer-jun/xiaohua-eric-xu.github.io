@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "name": "许效华",
+    "nameEn": "Xiaohua Xu",
+    "position": "Professor",
+    "positionCn": "教授",
+    "category": "professor",
+    "email": "xiaohuaxu@ustc.edu.cn",
+    "research": "InSAR technology and applications, crustal deformation monitoring, earthquake geodesy",
+    "photo": "/images/team/xu-xiaohua.jpg",
+    "homepage": "https://faculty.ustc.edu.cn/xiaohuaxu/zh_CN/index.htm",
+    "joinYear": 2010
+  },
+  {
+    "id": 2,
+    "name": "李四",
+    "nameEn": "Si Li",
+    "position": "Associate Researcher",
+    "positionCn": "副研究员",
+    "category": "associate",
+    "email": "lisi@mail.ustc.edu.cn",
+    "research": "InSAR time series analysis",
+    "photo": "/images/team/lisi.jpg",
+    "homepage": "",
+    "joinYear": 2022
+  },
+  {
+    "id": 3,
+    "name": "王五",
+    "nameEn": "Wu Wang",
+    "position": "Postdoctoral Fellow",
+    "positionCn": "博士后",
+    "category": "postdoc",
+    "email": "wangwu@mail.ustc.edu.cn",
+    "research": "Volcano deformation monitoring",
+    "photo": "/images/team/wangwu.jpg",
+    "homepage": "",
+    "joinYear": 2024
+  },
+  {
+    "id": 4,
+    "name": "赵六",
+    "nameEn": "Liu Zhao",
+    "position": "PhD Student",
+    "positionCn": "博士研究生",
+    "category": "phd",
+    "email": "zhaoliu@mail.ustc.edu.cn",
+    "research": "Earthquake geodesy",
+    "photo": "/images/team/zhaoliu.jpg",
+    "homepage": "",
+    "joinYear": 2023
+  },
+  {
+    "id": 5,
+    "name": "钱七",
+    "nameEn": "Qi Qian",
+    "position": "Master's Student",
+    "positionCn": "硕士研究生",
+    "category": "master",
+    "email": "qianqi@mail.ustc.edu.cn",
+    "research": "SAR image processing",
+    "photo": "/images/team/qianqi.jpg",
+    "homepage": "",
+    "joinYear": 2024
+  }
+]

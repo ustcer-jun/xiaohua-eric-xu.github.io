@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "year": 2024,
+    "category": "Group Photos",
+    "title": "Spring 2024 Group Photo",
+    "date": "2024-03-15",
+    "images": [
+      "/images/gallery/2024/group-1.jpg"
+    ],
+    "description": "Group photo taken during the spring semester."
+  }
+]
