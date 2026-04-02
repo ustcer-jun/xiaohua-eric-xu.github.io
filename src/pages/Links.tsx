@@ -20,40 +20,40 @@ const Links = () => {
       name: 'Google Scholar',
       url: 'https://scholar.google.com/citations?hl=zh-CN&user=ME1EfdsAAAAJ&view_op=list_works&sortby=pubdate',
       icon: <BookOpen size={28} />,
-      description: '查看全部学术论文与引用'
+      description: t('links.academic_profiles.google_scholar')
     },
     {
       name: 'GitHub',
       url: 'https://github.com/Xiaohua-Eric-Xu',
       icon: <Code size={28} />,
-      description: '代码仓库与开源项目'
+      description: t('links.academic_profiles.github')
     },
     {
       name: 'GMTSAR Downloads',
       url: 'https://topex.ucsd.edu/gmtsar/downloads/',
       icon: <Download size={28} />,
-      description: 'GMTSAR软件下载'
+      description: t('links.academic_profiles.gmtsar_downloads')
     }
   ];
 
   const relatedWebsites = [
     {
-      name: '中国科学技术大学',
+      name: t('links.related_websites.ustc'),
       url: 'https://www.ustc.edu.cn',
       icon: <Building size={28} />,
-      description: 'USTC 官方主页'
+      description: t('links.related_websites.ustc_description')
     },
     {
-      name: '地球和空间科学学院',
+      name: t('links.related_websites.ess'),
       url: 'https://ess.ustc.edu.cn',
       icon: <Globe size={28} />,
-      description: '学院官方网站'
+      description: t('links.related_websites.ess_description')
     },
     {
-      name: '蒙城地球物理国家野外科学观测研究站',
+      name: t('links.related_websites.mengcheng'),
       url: 'http://earthquake.ustc.edu.cn',
       icon: <Database size={28} />,
-      description: '地震监测与研究'
+      description: t('links.related_websites.mengcheng_description')
     }
   ];
 
@@ -62,19 +62,19 @@ const Links = () => {
       name: 'ESA Sentinel Data Hub',
       url: 'https://scihub.copernicus.eu',
       icon: <Database size={28} />,
-      description: '欧洲空间局哨兵数据'
+      description: t('links.sar_data_portals.esa')
     },
     {
       name: 'NASA Alaska Satellite Facility',
       url: 'https://search.asf.alaska.edu/#/',
       icon: <Database size={28} />,
-      description: 'ASF SAR数据存档'
+      description: t('links.sar_data_portals.asf')
     },
     {
       name: 'NASA Earthdata',
       url: 'https://earthdata.nasa.gov',
       icon: <Database size={28} />,
-      description: 'NASA地球观测数据'
+      description: t('links.sar_data_portals.earthdata')
     }
   ];
 
@@ -83,13 +83,13 @@ const Links = () => {
       name: 'GMT',
       url: 'https://www.generic-mapping-tools.org',
       icon: <Code size={28} />,
-      description: '通用地图工具集'
+      description: t('links.insar_tools.gmt')
     },
     {
       name: 'GMTSAR',
       url: 'https://topex.ucsd.edu/gmtsar',
       icon: <Code size={28} />,
-      description: 'InSAR处理软件 (基于GMT)'
+      description: t('links.insar_tools.gmtsar')
     }
   ];
 

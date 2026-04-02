@@ -147,6 +147,43 @@
       "sar_data_portals": "SAR Data Portals",
       "insar_tools": "InSAR Processing Tools"
     },
+    "academic_profiles": {
+      "google_scholar": "View all academic papers and citations",
+      "github": "Code repositories and open source projects",
+      "gmtsar_downloads": "GMTSAR software downloads"
+    },
+    "related_websites": {
+      "ustc": "University of Science and Technology of China",
+      "ustc_description": "USTC official homepage",
+      "ess": "School of Earth and Space Sciences",
+      "ess_description": "School official website",
+      "mengcheng": "Mengcheng National Field Scientific Observation and Research Station of Geophysics",
+      "mengcheng_description": "Earthquake monitoring and research"
+    },
+    "sar_data_portals": {
+      "esa": "European Space Agency Sentinel data",
+      "asf": "ASF SAR data archive",
+      "earthdata": "NASA Earth observation data"
+    },
+    "insar_tools": {
+      "gmt": "Generic Mapping Tools",
+      "gmtsar": "InSAR processing software (based on GMT)"
+    },
     "visit": "Visit"
+  },
+  "team": {
+    "hero": {
+      "title": "Team Members",
+      "description": "Core members of the USTC-InSAR research team"
+    },
+    "categories": {
+      "professor": "Professors",
+      "associate": "Associate Researchers",
+      "postdoc": "Postdoctoral Fellows",
+      "phd": "PhD Students",
+      "master": "Master's Students",
+      "undergraduate": "Undergraduate Students"
+    },
+    "email": "Email"
   }
 }

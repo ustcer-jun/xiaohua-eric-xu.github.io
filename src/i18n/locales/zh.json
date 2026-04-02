@@ -147,6 +147,43 @@
       "sar_data_portals": "SAR数据平台",
       "insar_tools": "InSAR处理工具"
     },
+    "academic_profiles": {
+      "google_scholar": "查看全部学术论文与引用",
+      "github": "代码仓库与开源项目",
+      "gmtsar_downloads": "GMTSAR软件下载"
+    },
+    "related_websites": {
+      "ustc": "中国科学技术大学",
+      "ustc_description": "USTC 官方主页",
+      "ess": "地球和空间科学学院",
+      "ess_description": "学院官方网站",
+      "mengcheng": "蒙城地球物理国家野外科学观测研究站",
+      "mengcheng_description": "地震监测与研究"
+    },
+    "sar_data_portals": {
+      "esa": "欧洲空间局哨兵数据",
+      "asf": "ASF SAR数据存档",
+      "earthdata": "NASA地球观测数据"
+    },
+    "insar_tools": {
+      "gmt": "通用地图工具集",
+      "gmtsar": "InSAR处理软件 (基于GMT)"
+    },
     "visit": "访问"
+  },
+  "team": {
+    "hero": {
+      "title": "团队成员",
+      "description": "USTC-InSAR研究团队的核心成员"
+    },
+    "categories": {
+      "professor": "教授",
+      "associate": "副研究员",
+      "postdoc": "博士后",
+      "phd": "博士研究生",
+      "master": "硕士研究生",
+      "undergraduate": "本科生"
+    },
+    "email": "邮件"
   }
 }

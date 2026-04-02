@@ -2,23 +2,26 @@ import { motion } from 'framer-motion';
 import { Mail, Globe, User } from 'lucide-react';
 import teamMembers from '@/data/team-members.json';
 import { getImageUrl } from '@/lib/imageUtils';
+import { useI18n } from '@/i18n/I18nContext';
 
 const Team = () => {
+  const { t } = useI18n();
+
   const categories = [
-    { key: 'professor', label: '教授' },
-    { key: 'associate', label: '副研究员' },
-    { key: 'postdoc', label: '博士后' },
-    { key: 'phd', label: '博士研究生' },
-    { key: 'master', label: '硕士研究生' },
-    { key: 'undergraduate', label: '本科生' }
+    { key: 'professor', labelKey: 'team.categories.professor' },
+    { key: 'associate', labelKey: 'team.categories.associate' },
+    { key: 'postdoc', labelKey: 'team.categories.postdoc' },
+    { key: 'phd', labelKey: 'team.categories.phd' },
+    { key: 'master', labelKey: 'team.categories.master' },
+    { key: 'undergraduate', labelKey: 'team.categories.undergraduate' }
   ];
 
   return (
     <div className="min-h-screen bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#003366] mb-4">团队成员</h1>
-          <p className="text-xl text-gray-600">USTC-InSAR研究团队的核心成员</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-[#003366] mb-4">{t('team.hero.title')}</h1>
+          <p className="text-xl text-gray-600">{t('team.hero.description')}</p>
         </div>
 
         {categories.map((category) => {
@@ -30,7 +33,7 @@ const Team = () => {
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-[#003366] flex items-center gap-3">
                   <span className="w-2 h-8 bg-[#C41E3A] rounded-full"></span>
-                  {category.label}
+                  {t(category.labelKey)}
                 </h2>
               </div>
 
@@ -74,7 +77,7 @@ const Team = () => {
                           className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gray-100 hover:bg-[#C41E3A] hover:text-white rounded-lg transition-colors text-sm font-medium"
                         >
                           <Mail size={16} />
-                          邮件
+                          {t('team.email')}
                         </a>
                         {member.homepage && (
                           <a 
