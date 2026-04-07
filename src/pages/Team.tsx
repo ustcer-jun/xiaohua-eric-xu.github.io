@@ -113,7 +113,7 @@ const Team = () => {
                 // Other members - grid format
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                   {members.map((member) => (
-                    <div key={member.id} className="flex flex-col items-center p-3">
+                    <div key={member.id} className="flex flex-col items-start p-3">
                       <div className="w-48 h-48 mb-3">
                         <img 
                           src={getImageUrl(member.photo)} 
