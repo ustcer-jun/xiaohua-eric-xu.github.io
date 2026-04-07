@@ -23,7 +23,7 @@ const Header = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold">
+            <Link to="/" className="text-2xl font-bold drop-shadow-sm">
               USTC InSAR Group
             </Link>
           </div>
@@ -35,7 +35,7 @@ const Header = () => {
                 key={link.path}
                 to={link.path}
                 className={cn(
-                  'text-lg font-semibold transition-colors hover:text-blue-200 relative',
+                  'text-lg font-bold transition-colors hover:text-blue-100 relative drop-shadow-sm',
                   location.pathname === link.path && 'after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent'
                 )}
               >

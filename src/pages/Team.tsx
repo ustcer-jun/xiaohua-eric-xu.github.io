@@ -60,7 +60,7 @@ const Team = () => {
                 <div className="space-y-8">
                   {members.map((member) => (
                     <div key={member.id} className="flex flex-col md:flex-row gap-6">
-                      <div className="md:w-1/4">
+                      <div className="md:w-1/4 flex items-start">
                         <div className="w-48 h-48">
                           <img 
                             src={getImageUrl(member.photo)} 
