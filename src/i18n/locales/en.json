@@ -1,0 +1,175 @@
+{
+  "header": {
+    "home": "Home",
+    "team": "Team",
+    "research": "Research",
+    "teaching": "Teaching",
+    "news": "News",
+    "gallery": "Gallery",
+    "links": "Links"
+  },
+  "home": {
+    "about": {
+      "title": "About Our Group",
+      "paragraph1": "The USTC InSAR Research Group, led by Professor Xiaohua Xu, is affiliated with the School of Earth and Space Sciences at the University of Science and Technology of China.",
+      "paragraph2": "Our team is dedicated to the development and application of InSAR technology, using satellite radar data to conduct high-precision surface deformation monitoring, earthquake geodesy, and crustal deformation research.",
+      "research_directions": "Main Research Directions:",
+      "direction1": "InSAR technology development and methodological research",
+      "direction2": "Earthquake geodesy and fault kinematics",
+      "direction3": "AI-enabled InSAR applications"
+    },
+    "news": {
+      "title": "Latest News",
+      "view_all": "View All News",
+      "read_more": "Read More"
+    },
+    "publications": {
+      "title": "Featured Publications",
+      "view_all": "View All Publications"
+    },
+    "group_photos": {
+      "title": "Group Life"
+    }
+  },
+  "footer": {
+    "contact": "Contact",
+    "phone": "Phone",
+    "address": "School of Earth and Space Sciences, University of Science and Technology of China, Hefei, Anhui Province, China"
+  },
+  "research": {
+    "hero": {
+      "title": "Research Results",
+      "description": "Our research directions and academic publications"
+    },
+    "areas": {
+      "title": "Research Areas",
+      "description": "We focus on the following core research directions",
+      "insar": {
+        "title": "InSAR Technology and Applications",
+        "description": "We develop and optimize InSAR processing algorithms to improve the accuracy and efficiency of deformation monitoring. Optimizing InSAR data processing workflows includes automation, phase unwrapping optimization algorithms, time series analysis and other key technologies."
+      },
+      "earthquake": {
+        "title": "Earthquake Geodesy",
+        "description": "Using InSAR data to study earthquake coseismic deformation, post-seismic slip, and earthquake cycles. Our research provides important basis for understanding earthquake mechanisms and earthquake hazard assessment."
+      },
+      "ai": {
+        "title": "Intersection of InSAR and AI",
+        "description": "Combining artificial intelligence technology with InSAR data processing, developing intelligent interpretation algorithms, improving data processing efficiency and deformation recognition accuracy, and exploring new InSAR application areas."
+      }
+    },
+    "publications": {
+      "title": "Academic Publications",
+      "description": "Research papers published by our team",
+      "search": "Search paper title, author or journal...",
+      "year_filter": "All Years",
+      "type_filter": "All Types",
+      "no_results": "No matching papers found",
+      "filters": {
+        "journal": "Journal Paper",
+        "conference": "Conference Paper"
+      }
+    }
+  },
+  "teaching": {
+    "hero": {
+      "title": "Teaching",
+      "description": "Cultivating the next generation of earth observation scientists"
+    },
+    "courses": {
+      "title": "Courses Taught",
+      "download_syllabus": "Download Syllabus"
+    },
+    "achievements": {
+      "title": "Teaching Achievements",
+      "no_data": "No teaching achievement information available, will be updated later."
+    },
+    "resources": {
+      "title": "Student Resources",
+      "no_data": "No student resource information available, will be updated later."
+    }
+  },
+  "news": {
+    "hero": {
+      "title": "News & Updates",
+      "description": "Stay updated with our team's latest developments and activities"
+    },
+    "categories": {
+      "all": "All",
+      "award": "Awards",
+      "publication": "Publications",
+      "event": "Events",
+      "other": "Other"
+    },
+    "no_data": "No relevant news available",
+    "back_to_list": "Back to News",
+    "related": "Related News",
+    "not_found": {
+      "title": "News Not Found",
+      "message": "Sorry, the news you are looking for does not exist or has been deleted.",
+      "back": "Back to News List"
+    }
+  },
+  "gallery": {
+    "hero": {
+      "title": "Gallery",
+      "description": "Capturing memorable moments of our team"
+    },
+    "categories": {
+      "group_photos": "Group Photos",
+      "conferences": "Conferences",
+      "field_work": "Field Work",
+      "social_events": "Social Events"
+    }
+  },
+  "links": {
+    "hero": {
+      "title": "Related Links",
+      "description": "Academic resources, data platforms, and useful tools"
+    },
+    "sections": {
+      "academic_profiles": "Academic Profiles",
+      "related_websites": "Related Websites",
+      "sar_data_portals": "SAR Data Portals",
+      "insar_tools": "InSAR Processing Tools"
+    },
+    "academic_profiles": {
+      "google_scholar": "View all academic papers and citations",
+      "github": "Code repositories and open source projects",
+      "gmtsar_downloads": "GMTSAR software downloads"
+    },
+    "related_websites": {
+      "ustc": "University of Science and Technology of China",
+      "ustc_description": "USTC official homepage",
+      "ess": "School of Earth and Space Sciences",
+      "ess_description": "School official website",
+      "mengcheng": "Mengcheng National Field Scientific Observation and Research Station of Geophysics",
+      "mengcheng_description": "Earthquake monitoring and research"
+    },
+    "sar_data_portals": {
+      "esa": "European Space Agency Sentinel data",
+      "asf": "ASF SAR data archive",
+      "earthdata": "NASA Earth observation data"
+    },
+    "insar_tools": {
+      "gmt": "Generic Mapping Tools",
+      "gmtsar": "InSAR processing software (based on GMT)"
+    },
+    "visit": "Visit"
+  },
+  "team": {
+    "hero": {
+      "title": "Team Members",
+      "description": "Core members of the USTC-InSAR research team"
+    },
+    "categories": {
+      "professor": "Professors",
+      "associate": "Associate Researchers",
+      "postdoc": "Postdoctoral Fellows",
+      "phd": "PhD Students",
+      "master": "Master's Students",
+      "undergraduate": "Undergraduate Students"
+    },
+    "email": "Email",
+    "website": "Personal Website"
+  }
+}

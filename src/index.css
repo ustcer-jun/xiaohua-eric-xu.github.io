@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Source Sans Pro', 'Noto Sans SC', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #2C3E50;
+  background-color: #F8F9FA;
+}
+
+a {
+  color: #2874A6;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #1B4F72;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: #1B4F72;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background-color: #922B21;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .content-auto {
+    content-visibility: auto;
+  }
+}

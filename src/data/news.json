@@ -1,0 +1,56 @@
+[
+  {
+    "id": "2026-spring-new-members",
+    "date": "2026-03-15",
+    "title": {
+      "en": "Welcome New Members to Join Our Group!",
+      "zh": "欢迎新同学加入课题组！"
+    },
+    "summary": {
+      "en": "Three new students joined our group in Spring 2026, pursuing master's and doctoral degrees.",
+      "zh": "三位同学于2026年春季正式加入USTC InSAR课题组，分别攻读硕士和博士学位。"
+    },
+    "content": {
+      "en": "We are pleased to welcome three new members to our research group in Spring 2026. They will work on various research projects related to InSAR technology and its applications in earth science.",
+      "zh": "我们很高兴在2026年春季迎来三位新成员加入我们的研究团队。他们将参与InSAR技术及其在地球科学中的应用相关的各种研究项目。"
+    },
+    "image": "/images/gallery/2024/group-1.jpg",
+    "category": "group-activity"
+  },
+  {
+    "id": "2025-grl-publication",
+    "date": "2025-12-20",
+    "title": {
+      "en": "New Paper Published in Geophysical Research Letters",
+      "zh": "课题组论文被Geophysical Research Letters接收"
+    },
+    "summary": {
+      "en": "Our paper on InSAR time series analysis has been accepted by Geophysical Research Letters.",
+      "zh": "我们关于InSAR时间序列分析的论文已被Geophysical Research Letters接收。"
+    },
+    "content": {
+      "en": "The paper titled 'Improved InSAR Time Series Analysis for Crustal Deformation Monitoring' has been accepted for publication in Geophysical Research Letters, a top journal in the field of geophysics.",
+      "zh": "题为《改进的InSAR时间序列分析用于地壳形变监测》的论文已被地球物理学领域的顶级期刊Geophysical Research Letters接收发表。"
+    },
+    "image": "/images/research/AI.png",
+    "category": "publication"
+  },
+  {
+    "id": "2025-agu-meeting",
+    "date": "2025-10-01",
+    "title": {
+      "en": "Professor Xu Attended AGU Fall Meeting",
+      "zh": "许效华教授参加AGU秋季会议"
+    },
+    "summary": {
+      "en": "Professor Xiaohua Xu presented a talk at the AGU Fall Meeting 2025.",
+      "zh": "许效华教授在2025年AGU秋季会议上作了口头报告。"
+    },
+    "content": {
+      "en": "Professor Xiaohua Xu attended the AGU Fall Meeting 2025 held in San Francisco, USA, and presented a talk on 'Recent Advances in InSAR Technology for Earthquake Studies'.",
+      "zh": "许效华教授参加了在美国旧金山举行的2025年AGU秋季会议，并作了题为《InSAR技术在地震研究中的最新进展》的口头报告。"
+    },
+    "image": "/images/research/Ridgecrest.png",
+    "category": "conference"
+  }
+]
