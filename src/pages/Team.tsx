@@ -126,19 +126,19 @@ const Team = () => {
                         href={member.homepage || '#'} 
                         target={member.homepage ? '_blank' : '_self'}
                         rel={member.homepage ? 'noopener noreferrer' : ''}
-                        className="text-lg font-semibold text-primary mb-1 text-center w-full truncate hover:underline"
+                        className="text-lg font-semibold text-primary mb-1 text-left w-full truncate hover:underline"
                       >
                         {locale === 'zh' ? member.name : member.nameEn}
                       </a>
-                      <p className="text-text-secondary text-sm mb-2 text-center w-full truncate">
+                      <p className="text-text-secondary text-sm mb-2 text-left w-full truncate">
                         {locale === 'zh' ? member.positionCn : member.position}
                       </p>
-                      <p className="text-text-primary text-sm mb-2 text-center w-full h-16 overflow-hidden">
+                      <p className="text-text-primary text-sm mb-2 text-left w-full h-16 overflow-hidden">
                         {member.research}
                       </p>
                       <a 
                         href={`mailto:${member.email}`}
-                        className="text-link hover:text-primary text-sm text-center w-full truncate"
+                        className="text-link hover:text-primary text-sm text-left w-full truncate"
                       >
                         {member.email}
                       </a>
