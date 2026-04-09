@@ -1,21 +1,54 @@
-import { Link } from 'react-router-dom';
-import { Calendar } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import { Calendar, X } from 'lucide-react';
 import newsData from '@/data/news.json';
 import publicationsData from '@/data/publications.json';
 import { getImageUrl } from '@/lib/imageUtils';
 import { useI18n } from '@/i18n/I18nContext';
+import { useState } from 'react';
 
 const Home = () => {
   const { t, locale } = useI18n();
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   // Get latest 3 news items
   const latestNews = newsData.slice(0, 3);
   
   // Get latest 3 publications
   const latestPublications = publicationsData.slice(0, 3);
+  
+  // Gallery data
+  const galleries = [
+    { id: '2024', name: '2024', cover: '/images/USTC_InSAR_share/2024/1.JPG', count: 2 },
+    { id: '2025', name: '2025', cover: '/images/USTC_InSAR_share/2025/1.JPG', count: 5 },
+    { id: '2026', name: '2026', cover: '/images/USTC_InSAR_share/2026/1.jpg', count: 1 },
+    { id: 'AGU', name: 'AGU', cover: '/images/USTC_InSAR_share/AGU/1.jpg', count: 8 },
+    { id: 'GMTSAR', name: 'GMTSAR', cover: '/images/USTC_InSAR_share/GMTSAR/1.png', count: 6 }
+  ];
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Image Lightbox */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button 
+            className="absolute top-4 right-4 text-white hover:text-gray-300 z-10"
+            onClick={() => setSelectedImage(null)}
+          >
+            <X size={32} />
+          </button>
+          <img 
+            src={selectedImage} 
+            alt="Enlarged" 
+            className="max-w-full max-h-full object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
+      
       {/* About Our Group Section */}
       <section className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-6">
@@ -132,34 +165,38 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Group Photos Section */}
+      {/* Group Life Section */}
       <section className="py-12 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-2xl font-semibold text-primary mb-6 section-title">
             {t('home.group_photos.title')}
           </h2>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <img 
-              src={getImageUrl('/images/gallery/2024/group-1.jpg')} 
-              alt="Group Photo 1" 
-              className="w-full h-48 object-cover"
-            />
-            <img 
-              src={getImageUrl('/images/research/ustcblue.jpg')} 
-              alt="Group Photo 2" 
-              className="w-full h-48 object-cover"
-            />
-            <img 
-              src={getImageUrl('/images/research/NISAR.jpg')} 
-              alt="Group Photo 3" 
-              className="w-full h-48 object-cover"
-            />
-            <img 
-              src={getImageUrl('/images/research/sentinel-1.png')} 
-              alt="Group Photo 4" 
-              className="w-full h-48 object-cover"
-            />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {galleries.map((gallery) => (
+              <div key={gallery.id} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div className="relative">
+                  <img 
+                    src={getImageUrl(gallery.cover)} 
+                    alt={gallery.name} 
+                    className="w-full h-64 object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => setSelectedImage(getImageUrl(gallery.cover))}
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-3">
+                    <h3 className="text-lg font-semibold">{gallery.name}</h3>
+                    <p className="text-sm">{gallery.count} photos</p>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <button 
+                    className="w-full bg-primary text-white py-2 px-4 rounded hover:bg-primaryDark transition-colors"
+                    onClick={() => navigate(`/gallery/${gallery.id}`)}
+                  >
+                    View Gallery
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

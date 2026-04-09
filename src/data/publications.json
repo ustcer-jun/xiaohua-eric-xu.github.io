@@ -361,5 +361,60 @@
     "pdf": "https://www.science.org/doi/full/10.1126/science.aac6383",
     "type": "journal",
     "citations": 0
+  },
+  {
+    "id": 34,
+    "authors": "L Sun, X Xu, P Mann, J Hippolyte",
+    "title": "Fault kinematics of the 2019–2026 Puerto Rico earthquake sequence: Conjugate faulting within a zone of oblique subduction",
+    "journal": "Journal of Geophysical Research: Solid Earth 131 (3), e2025JB032952",
+    "year": 2026,
+    "doi": "",
+    "pdf": "",
+    "type": "journal",
+    "citations": 0
+  },
+  {
+    "id": 35,
+    "authors": "Z He, Z Zhang, X Wang, Z Wang, TC Sunilkumar, X Xu, R Wang",
+    "title": "Rupture Dynamics of the 2025 Mw 7.7 Myanmar Earthquake: A Bilateral Supershear Rupture on Unusually Long Fault Superhighway",
+    "journal": "Geophysical Research Letters 53 (1), e2025GL118023",
+    "year": 2026,
+    "doi": "",
+    "pdf": "",
+    "type": "journal",
+    "citations": 4
+  },
+  {
+    "id": 36,
+    "authors": "Y Li, X Shan, C Li, C Huang, X Wang, X Xu, H Xiong",
+    "title": "Sustained supershear rupture during the 2025 Mandalay, Myanmar earthquake",
+    "journal": "Communications Earth & Environment 6 (1), 1030",
+    "year": 2025,
+    "doi": "",
+    "pdf": "",
+    "type": "journal",
+    "citations": 1
+  },
+  {
+    "id": 37,
+    "authors": "Z Xiong, G Feng, Z Yang, H Gao, W Xu, L Zhang, X Xu, Z Lu, J Hu, Z Li, ...",
+    "title": "Nationwide mapping and characterization of land subsidence in the United States using InSAR",
+    "journal": "Remote Sensing of Environment 333, 115134",
+    "year": 2025,
+    "doi": "",
+    "pdf": "",
+    "type": "journal",
+    "citations": 1
+  },
+  {
+    "id": 38,
+    "authors": "Y Zhang, X Xu",
+    "title": "Constraining shallow slip deficit with phase gradient data",
+    "journal": "Geophysical Journal International 244 (1), ggaf427",
+    "year": 2025,
+    "doi": "",
+    "pdf": "",
+    "type": "journal",
+    "citations": 0
   }
 ]

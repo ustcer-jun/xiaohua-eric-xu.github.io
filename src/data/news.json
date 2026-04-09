@@ -1,56 +1,128 @@
 [
   {
-    "id": "2026-spring-new-members",
-    "date": "2026-03-15",
+    "id": "2026-Group-photo",
+    "date": "2026-04-08",
     "title": {
-      "en": "Welcome New Members to Join Our Group!",
-      "zh": "欢迎新同学加入课题组！"
+      "en": "2026 USTC - InSAR Spring Group Photo!",
+      "zh": "2026 USTC - InSAR 春季合照"
     },
     "summary": {
-      "en": "Three new students joined our group in Spring 2026, pursuing master's and doctoral degrees.",
-      "zh": "三位同学于2026年春季正式加入USTC InSAR课题组，分别攻读硕士和博士学位。"
+      "en": "The tradition of USTC-InSAR is to take a commemorative group photo every year when the cherry blossoms at USTC are in full bloom. This year, our group photo has a few new faces (new students joined).",
+      "zh": "USTC-InSAR课题组的传统， 是在中国科学技术大学老北门樱花盛开的时候每年拍一张纪念合影。今年，我们的合影中又出现了一些新面孔。"
     },
     "content": {
-      "en": "We are pleased to welcome three new members to our research group in Spring 2026. They will work on various research projects related to InSAR technology and its applications in earth science.",
-      "zh": "我们很高兴在2026年春季迎来三位新成员加入我们的研究团队。他们将参与InSAR技术及其在地球科学中的应用相关的各种研究项目。"
+      "en": "On April 8, 2026, it is cherry blossom season again. Whenever the cherry blossoms bloom along the Old North Gate Avenue at USTC, taking an annual commemorative group photo for the research team has been an unchanging tradition of USTC-InSAR. This year, some new faces appeared in our photo (new students joined: third from the left is Master's student Xu Sijie, sixth from the left is senior undergraduate Duan Haonan).",
+      "zh": "2026年4月8号，又是一年樱花季，每当科大老北门樱花大道樱花盛开时，为课题组拍一张全年纪念合影是USTC-InSAR亘古不变的传统。今年，我们的合影中出现了一些新面孔（新学生加入, 左三硕士生许思婕，左六大四本科生段浩楠）。"
     },
-    "image": "/images/gallery/2024/group-1.jpg",
+    "image": "/images/gallery/2026/group.jpg",
     "category": "group-activity"
   },
   {
-    "id": "2025-grl-publication",
-    "date": "2025-12-20",
+    "id": "2026-JGR-publication",
+    "date": "2026-02-20",
     "title": {
-      "en": "New Paper Published in Geophysical Research Letters",
-      "zh": "课题组论文被Geophysical Research Letters接收"
+      "en": "New Paper Published in Journal of Geophysical Research: Solid Earth",
+      "zh": "新论文被 Journal of Geophysical Research: Solid Earth 接收"
     },
     "summary": {
-      "en": "Our paper on InSAR time series analysis has been accepted by Geophysical Research Letters.",
-      "zh": "我们关于InSAR时间序列分析的论文已被Geophysical Research Letters接收。"
+      "en": "Associate Researcher Sun Lei published a paper as the first author in the international journal Journal of Geophysical Research: Solid Earth titled 'Fault Kinematics of the 2019–2026 Puerto Rico Earthquake Sequence: Conjugate Faulting Within a Zone of Oblique Subduction'.",
+      "zh": "课题组副研究员孙磊以第一作者身份在国际期刊 Journal of Geophysical Research: Solid Earth 发表论文 “Fault Kinematics of the 2019–2026 Puerto Rico Earthquake Sequence: Conjugate Faulting Within a Zone of Oblique  Subduction”。"
     },
     "content": {
-      "en": "The paper titled 'Improved InSAR Time Series Analysis for Crustal Deformation Monitoring' has been accepted for publication in Geophysical Research Letters, a top journal in the field of geophysics.",
-      "zh": "题为《改进的InSAR时间序列分析用于地壳形变监测》的论文已被地球物理学领域的顶级期刊Geophysical Research Letters接收发表。"
+      "en": "The 2019–2026 southwestern Puerto Rico earthquake sequence has the characteristics of an earthquake swarm with over 9,000 events of Mw 2.5 or greater over an area of 1,500 km2, and the largest event is an Mw 6.4 on 7 January 2020. Previous studies have proposed two structural interpretations: (a) an E‐striking, N‐dipping normal fault hosting the largest event with a left‐lateral oblique slip; superimposed on this fault is an X‐shaped conjugate strike‐slip faults reflecting NE‐SW shortening; and (b) a NE‐striking, SE‐dipping normal fault of the largest event with a right‐lateral oblique slip. Based on focal mechanism solutions, global navigation satellite system (GNSS) and satellite radar interferometry data, we propose four fault families that define a slightly different X‐shaped pattern: (a) left‐lateral WNW‐ESE faults including two parallel faults that define a 12‐km‐wide stepover area and pull‐apart basin; (b) an WSW‐ENE left‐lateral fault; (c) right‐lateral NNE‐SSW faults; and (d) E‐W left‐lateral oblique‐slip normal faults including the one hosting the largest event inside the pull‐apart basin. This active fault kinematics closely reflects measured faults in Late‐Miocene‐Pliocene rocks, indicating that this deformation pattern has been active for several million years. The proposed fault kinematic model is consistent with geodetic data and an overall crustal deformation model of coupled NW‐SE extension and NE‐SW compression produced by oblique convergence across the North America‐Caribbean plate boundary. The occurrence of prolonged earthquake sequence on crustal conjugate systems poses a seismic hazard for this oblique plate boundary.",
+      "zh":"2019-2026年波多黎各西南部地震序列具有地震群的特征，在1,500平方公里的面积上发生了9,000多起Mw 2.5或以上的事件，最大的事件是2020年1月7日发生的Mw 6.4。之前的研究提出了两种结构解释：(a) 一条E向、N倾正断层，其最大事件为左旋断层。斜滑；叠加在该断层上的是反映NE-SW缩短的X形共轭走滑断层； (b) 最大事件的北东走向、东南倾正断层，带有右旋斜滑。基于震源机制解、全球导航卫星系统（GNSS）和卫星雷达干涉测量数据，我们提出了四个断层族，它们定义了略有不同的X形模式：（a）左侧WNW-ESE断层，包括两个平行断层，定义了12公里宽的跨步区和拉断盆地； (b) WSW-ENE 左旋断层； (c) 右侧 NNE-SSW 断层； (d) 东西向左旋斜滑正断层，包括拉分盆地内发生最大事件的断层。这种活跃的断层运动学密切反映了晚中新世-上新世岩石中测量到的断层，表明这种变形模式已经活跃了几百万年。所提出的断层运动学模型与大地测量数据以及北美-加勒比板块边界倾斜会聚产生的北西-东南延伸和北东-西南挤压耦合的整体地壳变形模型一致。地壳共轭系统上长期地震序列的发生对倾斜板块边界构成了地震危险。"
     },
-    "image": "/images/research/AI.png",
+    "image": "/images/research/JGR_2026.jpg",
     "category": "publication"
   },
   {
-    "id": "2025-agu-meeting",
-    "date": "2025-10-01",
+    "id": "2025-AGU-conference",
+    "date": "2025-12-20",
     "title": {
-      "en": "Professor Xu Attended AGU Fall Meeting",
-      "zh": "许效华教授参加AGU秋季会议"
+      "en": "Two PhD students, Zhao Xinyu and Wang Xin, attended the 2025 AGU meeting and given an oral presentation and a poster presentation, respectively.",
+      "zh": "课题组两位博士生，赵昕宇，王欣参加2025年AGU会议，并分别作口头报告以及海报。"
     },
     "summary": {
-      "en": "Professor Xiaohua Xu presented a talk at the AGU Fall Meeting 2025.",
-      "zh": "许效华教授在2025年AGU秋季会议上作了口头报告。"
+      "en": "Two PhD students, Zhao Xinyu and Wang Xin, went to New Orleans, USA to participate in the 2025 AGU, and shared their experiences of interacting with foreign academic researcher in the United States.",
+      "zh":"USTC-InSAR两位博士生，赵昕宇和王欣前往美国新奥尔良参加2025AGU，并分享了他们在美国与学术大牛的交流经历。"
     },
     "content": {
-      "en": "Professor Xiaohua Xu attended the AGU Fall Meeting 2025 held in San Francisco, USA, and presented a talk on 'Recent Advances in InSAR Technology for Earthquake Studies'.",
-      "zh": "许效华教授参加了在美国旧金山举行的2025年AGU秋季会议，并作了题为《InSAR技术在地震研究中的最新进展》的口头报告。"
+      "en": "Two PhD students from USTC-InSAR, Zhao Xinyu and Wang Xin, went to New Orleans, USA to attend the 2025 AGU. They presented an oral report and a poster, respectively, actively engaged with international scholars, and shared their experiences interacting with top academics in the US (top row, second from right / bottom row, second from left: David Sandwell, Prof. Xu's doctoral advisor at UCSD; bottom row, second from right: Yu Yao, Prof. Xu's junior fellow).",
+      "zh": "USTC-InSAR两位博士生，赵昕宇和王欣前往美国新奥尔良参加2025AGU，分别在大会上作口头报告以及海报分享，他们积极与海外学者进行交流，并分享了他们在美国与学术大牛的交流经历（图中上右二/下左二 David Sandwell (许老师在加州大学圣迭戈分校攻读博士期间的指导导师)， 下右二俞瑶/ 许老师的师妹）。"
     },
-    "image": "/images/research/Ridgecrest.png",
-    "category": "conference"
+    "image": "/images/research/AGU_david.jpg",
+    "category": "group-activity"
+  },
+  {
+    "id": "2025-GJI-publication",
+    "date": "2025-10-23",
+    "title": {
+      "en": "New Paper Published in Geophysical Journal International",
+      "zh": "新论文被Geophysical Journal International接收"
+    },
+    "summary": {
+      "en": "Master's student Zhang Yajun from the research group published a paper titled 'Constraining shallow slip deficit with phase gradient data' as the first author in the international journal Geophysical Journal International.",
+      "zh": "课题组硕士生张亚俊以第一作者身份在国际期刊 Geophysical Journal International 发表论文“Constraining shallow slip deficit with phase gradient data。"
+    },
+    "content": {
+      "en": "Coseismic slip models for large (Mw > 7) strike-slip earthquakes present a variety of shallow slip deficit (SSD). Accurate estimate of SSD is difficult, and it has been suggested that SSD are to some degree associated with fault-zone characteristics, incompleteness of data coverage as well as simplified model assumptions. Furthermore, SSD can also be sensitive to the amount of model smoothness adopted. Since phase gradient are sensitive to the missing shallow slip from our simulated data, we performed a synthetic test and presented a case study of the 2019 Ridgecrest earthquake sequence to validate that phase gradient from radar interferometry could help reveal the actual SSD for kinematic slip models even without enough near-fault observation. Our results indicate that even in the presence of a greater degree of observational gaps, the phase gradient can still nearly substitute for near-fault observations in constraining the shallow slip. Lastly, we provide a preferred coseismic slip model constrained by all available observations including phase gradient, but with 4-km data gap near the fault trace. This model results in∼35 per cent SSD for the Ridgecrest earthquakes, matching previous estimates that incorporate near-field data. Considering the phase gradient approach is a straightforward mathematical operation, this approach may be applicable to other types of earthquakes. Notably, due to the smaller amplitude and lower signal-to-noise ratio for the phase gradient data, one needs to carefully balance the trade-offs among weights of different data sets and model smoothness.",
+      "zh": "大型（Mw > 7）走滑地震的同震滑动模型呈现出各种浅滑动赤字（SSD）。准确估计SSD是很困难的，有人认为SSD在一定程度上与断层带特征、数据覆盖的不完整以及简化的模型假设有关。此外，SSD 还对所采用的模型平滑度很敏感。由于相位梯度对模拟数据中缺失的浅层滑移很敏感，因此我们进行了综合测试，并提出了 2019 年 Ridgecrest 地震序列的案例研究，以验证雷达干涉测量的相位梯度可以帮助揭示运动滑移模型的实际 SSD，即使没有足够的近断层观测。我们的结果表明，即使存在更大程度的观测间隙，相位梯度仍然可以几乎替代近断层观测来约束浅滑移。最后，我们提供了一个受所有可用观测（包括相位梯度）约束的首选同震滑移模型，但在断层迹线附近有 4 公里的数据间隙。该模型得出 Ridgecrest 地震约 35% 的 SSD，与之前结合近场数据的估计相匹配。考虑到相位梯度方法是一种简单的数学运算，该方法可能适用于其他类型的地震。值得注意的是，由于相位梯度数据的幅度较小，信噪比较低，因此需要仔细权衡不同数据集的权重和模型平滑度之间的权衡。"
+    },
+    "image": "/images/research/GJI_2025.jpg",
+    "category": "publication"
+  },
+  {
+    "id": "2025-GMTSAR-course",
+    "date": "2025-07-17",
+    "title": {
+      "en": "The 2nd InSAR Theory and Practice Summer Training Course was successfully held at the University of Science and Technology of China.",
+      "zh": "第二届InSAR理论与实践暑期培训课程在中国科学技术大学成功举办"
+    },
+    "summary": {
+      "en": "Co-organized by the Geodesy and Seismodynamics Committee of the Chinese Seismological Society and the University of Science and Technology of China, the 2nd InSAR Theory and Practice Summer Training Course was successfully held in Hefei from July 14 to 17, 2025, providing over 120 young scholars with systematic hands-on training in core InSAR data processing technologies and significantly strengthening talent development for crustal deformation monitoring and disaster mitigation research in China.",
+      "zh": "2025年7月14日至17日，由中国地震学会大地测量与地震动力学专委会与中国科学技术大学联合主办的第二届InSAR理论与实践暑期培训课程在合肥圆满举办，120余名全国青年学者通过“理论-实操-展示”一体化培训系统掌握了InSAR数据处理核心技术，有效推动了该技术在我国地表形变监测与防灾减灾领域的人才储备与科研应用。"
+    },
+    "content": {
+      "en": "In order to promote the popularization and application of Synthetic Aperture Radar Interferometry (InSAR) technology, and to enhance researchers' theoretical knowledge and practical skills in surface deformation monitoring and SAR data processing, the 2nd InSAR Theory and Practice Summer Training Course, jointly organized by the Geodesy and Seismodynamics Committee of the Chinese Society of Seismology and the School of Earth and Space Sciences of the University of Science and Technology of China, was successfully held from July 14 to 17, 2025, at the East Campus of the University of Science and Technology of China in Hefei, Anhui. The training attracted more than 120 young scholars and technical personnel from over fifty universities and research institutes nationwide, with a lively atmosphere for on-site exchanges and significant teaching effectiveness.",
+      "zh": "为推动合成孔径雷达干涉测量（InSAR）技术的普及与应用，提升科研人员在地表形变监测与SAR数据处理领域的理论素养与实践能力，由中国地震学会大地测量与地震动力学专业委员会与中国科学技术大学地球和空间科学学院联合主办的“第二届InSAR理论与实践暑期培训课程”于2025年7月14日至17日在安徽合肥中国科学技术大学东校区顺利举行。培训共吸引了来自全国五十余所高校和科研院所的120余位青年学者与技术人员参加，现场交流气氛热烈，教学效果显著。"
+    },
+    "image": "/images/gallery/2025/GMTSAR.png",
+    "category": "GMTSAR-course"
+  },
+  {
+    "id": "2025-Group-photo",
+    "date": "2025-04-08",
+    "title": {
+      "en": "2025 USTC - InSAR Spring Group Photo!",
+      "zh": "2025 USTC - InSAR 春季合照"
+    },
+    "summary": {
+      "en": "The tradition of USTC-InSAR is to take a commemorative group photo every year when the cherry blossoms at USTC are in full bloom. This year, our group photo has a few new faces (new students joined).",
+      "zh": "USTC-InSAR课题组的传统， 是在中国科学技术大学老北门樱花盛开的时候每年拍一张纪念合影。今年，课题组又有了新成员的加入。"
+    },
+    "content": {
+      "en": "On April 8, 2025, it is cherry blossom season again. Whenever the cherry blossoms bloom along the Old North Gate Avenue at USTC, taking an annual commemorative group photo for the research team has been an unchanging tradition of USTC-InSAR. This year, some new faces appeared in our photo.",
+      "zh": "2025年4月8号，又是一年樱花季，每当科大老北门樱花大道樱花盛开时，为课题组拍一张全年纪念合影是USTC-InSAR亘古不变的传统。今年，我们的合影中出现了一些新面孔。"
+    },
+    "image": "/images/gallery/2025/group-1.jpg",
+    "category": "group-activity"
+  },
+  {
+    "id": "2024-Group-photo",
+    "date": "2024-04-02",
+    "title": {
+      "en": "2024 USTC - InSAR First Group Photo -- A Cherished Memory",
+      "zh": "2024 USTC - InSAR 首张合影 -- 岁月珍藏"
+    },
+    "summary": {
+      "en": "TBorn from our inaugural group photograph on April 2, 2024, the annual cherry blossom tradition at USTC-InSAR has evolved into a cherished chronicle of our team’s evolution and individual growth, where each recurring spring bloom gracefully echoes the earnest beginnings of our academic family, continually inspiring our scholarly journey with enduring warmth and purpose.",
+      "zh": "自此，USTC-InSAR的樱花年度留念已升华为一项镌刻团队发展与成员成长记忆的温馨传统，岁岁花期如约绽放，而初融大家庭时的赤诚与青涩，已凝为岁月珍藏，化作我们科研征途上不竭的温暖与动力。"
+    },
+    "content": {
+      "en": "On April 2, 2024, the USTC-InSAR team captured its inaugural group photograph, establishing the annual cherry blossom portrait as a cherished tradition. Far more than a simple commemorative image, it chronicles the group’s collective milestones and the individual growth of each member. Though cherry blossoms return with every spring, the earnestness and youthful curiosity we brought when first joining this academic family remain forever treasured in memory, continually inspiring our scholarly journey.",
+      "zh": "024年4月2日，USTC-InSAR团队定格了首张成员合影，自此，樱花树下的年度留念便成为一项温馨传统。这方寸影像不仅镌刻了团队的发展轨迹，更见证了每位成员的成长足迹。岁岁樱花如约绽放，而初加入这个大家庭时的那份赤诚与青涩，已化作时光中最珍贵的记忆，伴随我们在科研之路上笃定前行。"
+    },
+    "image": "/images/gallery/2024/Group_2024.jpg",
+    "category": "group-activity"
   }
 ]

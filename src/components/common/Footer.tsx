@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-6 text-center">
         <div className="mb-4">
           <p className="text-sm mb-2">
-            {t('footer.contact')}: xuxh@ustc.edu.cn | {t('footer.phone')}: +86-551-XXXX
+            {t('footer.contact')}: xiaohua-xu@ustc.edu.cn
           </p>
           <p className="text-sm">
             {t('footer.address')}
