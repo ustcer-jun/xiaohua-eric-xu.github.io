@@ -19,11 +19,11 @@ const Home = () => {
   
   // Gallery data
   const galleries = [
-    { id: '2024', name: '2024', cover: '/images/USTC_InSAR_share/2024/1.JPG', count: 2 },
-    { id: '2025', name: '2025', cover: '/images/USTC_InSAR_share/2025/1.JPG', count: 5 },
-    { id: '2026', name: '2026', cover: '/images/USTC_InSAR_share/2026/1.jpg', count: 1 },
-    { id: 'AGU', name: 'AGU', cover: '/images/USTC_InSAR_share/AGU/1.jpg', count: 8 },
-    { id: 'GMTSAR', name: 'GMTSAR', cover: '/images/USTC_InSAR_share/GMTSAR/1.png', count: 6 }
+    { id: '2024', name: '2024', cover: '/images/USTC_InSAR_share/2024/1.JPG' },
+    { id: '2025', name: '2025', cover: '/images/USTC_InSAR_share/2025/1.JPG' },
+    { id: '2026', name: '2026', cover: '/images/USTC_InSAR_share/2026/1.jpg' },
+    { id: 'AGU', name: 'AGU', cover: '/images/USTC_InSAR_share/AGU/1.jpg' },
+    { id: 'GMTSAR', name: 'GMTSAR', cover: '/images/USTC_InSAR_share/GMTSAR/1.png' }
   ];
 
   return (
@@ -174,26 +174,20 @@ const Home = () => {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {galleries.map((gallery) => (
-              <div key={gallery.id} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+              <div 
+                key={gallery.id} 
+                className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+                onClick={() => navigate(`/gallery/${gallery.id}`)}
+              >
                 <div className="relative">
                   <img 
                     src={getImageUrl(gallery.cover)} 
                     alt={gallery.name} 
-                    className="w-full h-64 object-cover cursor-pointer hover:opacity-90 transition-opacity"
-                    onClick={() => setSelectedImage(getImageUrl(gallery.cover))}
+                    className="w-full h-64 object-cover hover:opacity-90 transition-opacity"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-3">
                     <h3 className="text-lg font-semibold">{gallery.name}</h3>
-                    <p className="text-sm">{gallery.count} photos</p>
                   </div>
-                </div>
-                <div className="p-4">
-                  <button 
-                    className="w-full bg-primary text-white py-2 px-4 rounded hover:bg-primaryDark transition-colors"
-                    onClick={() => navigate(`/gallery/${gallery.id}`)}
-                  >
-                    View Gallery
-                  </button>
                 </div>
               </div>
             ))}

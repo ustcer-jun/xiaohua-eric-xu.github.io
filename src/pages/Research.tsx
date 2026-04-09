@@ -54,7 +54,7 @@ const Research = () => {
           </h1>
 
           <p className="text-text-primary mb-8">
-            Our research focuses on using geodetic techniques, primarily InSAR technology, to analyze and study earth science problems, including earthquake geodesy, crustal deformation monitoring, volcanic activity, and groundwater changes.
+            {t('research.hero.description')}
           </p>
 
           <div className="space-y-12">

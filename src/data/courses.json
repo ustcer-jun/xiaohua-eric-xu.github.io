@@ -5,7 +5,10 @@
     "nameEn": "Space Geodesy",
     "code": "ESP501",
     "semester": "2024/04/29",
-    "description": "空间大地测量课程介绍",
+    "description": {
+      "zh": "空间大地测量课程介绍",
+      "en": "Introduction to Space Geodesy"
+    },
     "syllabus": "https://www.bb.us..."
   },
   {
@@ -14,7 +17,10 @@
     "nameEn": "Advances in Geophysics",
     "code": "ESP602",
     "semester": "2024/04/29",
-    "description": "地球物理进展课程介绍",
+    "description": {
+      "zh": "地球物理进展课程介绍",
+      "en": "Introduction to Advances in Geophysics"
+    },
     "syllabus": "https://www.bb.us..."
   }
 ]

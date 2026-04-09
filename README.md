@@ -332,6 +332,171 @@ theme: {
 
 ---
 
+## 如何添加新内容到网站
+
+### 1. 添加新的发表文章
+
+编辑 `src/data/publications.json` 文件，按照以下格式添加新的论文：
+
+```json
+{
+  "id": 39,
+  "authors": "作者列表",
+  "title": "论文标题",
+  "journal": "期刊名称，年份",
+  "year": 2026,
+  "doi": "DOI链接（可选）",
+  "pdf": "PDF链接（可选）",
+  "type": "journal",
+  "citations": 0
+}
+```
+
+- `id`：递增的唯一标识符
+- `authors`：作者列表，格式为 "Last Name Initials, Last Name Initials"
+- `title`：论文完整标题
+- `journal`：期刊名称和出版信息
+- `year`：出版年份
+- `type`：论文类型（"journal" 或 "conference"）
+- `citations`：引用次数（可定期更新）
+
+### 2. 添加新的新闻
+
+编辑 `src/data/news.json` 文件，按照以下格式添加新闻：
+
+```json
+{
+  "id": "2026-new-event",
+  "date": "2026-01-01",
+  "title": {
+    "en": "English Title",
+    "zh": "中文标题"
+  },
+  "summary": {
+    "en": "English summary",
+    "zh": "中文摘要"
+  },
+  "content": {
+    "en": "English content",
+    "zh": "中文内容"
+  },
+  "image": "/images/news/image.jpg",
+  "category": "event"
+}
+```
+
+- `id`：唯一标识符（建议使用 "年份-描述" 格式）
+- `date`：新闻日期（YYYY-MM-DD格式）
+- `title`：中英文标题
+- `summary`：中英文摘要
+- `content`：中英文详细内容
+- `image`：新闻图片路径（可选）
+- `category`：新闻类别（"publication", "event", "award", "other"）
+
+### 3. 添加新的图库内容
+
+#### 步骤1：添加图片
+
+1. 在 `public/images/USTC_InSAR_share/` 目录下创建新的文件夹（例如：`2027`）
+2. 将图片文件放入该文件夹，确保至少有一张 `1.JPG` 作为封面
+3. 图片命名建议：`1.JPG`, `2.JPG`, `3.jpg` 等
+
+#### 步骤2：更新图库数据
+
+编辑 `src/pages/Home.tsx` 文件，在 `galleries` 数组中添加新的图库：
+
+```javascript
+const galleries = [
+  // 现有图库...
+  { id: '2027', name: '2027', cover: '/images/USTC_InSAR_share/2027/1.JPG' }
+];
+```
+
+#### 步骤3：更新GalleryDetail页面
+
+编辑 `src/pages/GalleryDetail.tsx` 文件，在 `galleryData` 对象中添加新的图库数据：
+
+```javascript
+const galleryData = {
+  // 现有图库...
+  '2027': {
+    name: '2027',
+    images: [
+      '/images/USTC_InSAR_share/2027/1.JPG',
+      '/images/USTC_InSAR_share/2027/2.JPG'
+      // 添加所有图片路径
+    ]
+  }
+};
+```
+
+### 4. 添加新的教学课程
+
+编辑 `src/data/courses.json` 文件，按照以下格式添加新课程：
+
+```json
+{
+  "id": 3,
+  "name": "课程中文名",
+  "nameEn": "Course English Name",
+  "code": "课程代码",
+  "semester": "2024/09/01",
+  "description": {
+    "zh": "中文课程描述",
+    "en": "English course description"
+  },
+  "syllabus": "课程大纲链接（可选）"
+}
+```
+
+- `id`：递增的唯一标识符
+- `name`：中文课程名
+- `nameEn`：英文课程名
+- `code`：课程代码
+- `semester`：开课日期
+- `description`：中英文课程描述
+- `syllabus`：课程大纲链接（可选）
+
+### 5. 添加新的团队成员
+
+#### 步骤1：添加照片
+
+将成员照片放入 `public/images/team/` 目录，文件名格式为 `lastname-firstname.jpg`（例如：`zhang-san.jpg`）
+
+#### 步骤2：更新成员数据
+
+编辑 `src/data/team-members.json` 文件，按照以下格式添加新成员：
+
+```json
+{
+  "id": 14,
+  "name": "中文姓名",
+  "nameEn": "English Name",
+  "position": "English Position",
+  "positionCn": "中文职位",
+  "category": "phd",
+  "email": "email@mail.ustc.edu.cn",
+  "research": "研究方向（英文）",
+  "photo": "/images/team/lastname-firstname.jpg",
+  "homepage": "个人主页链接（可选）",
+  "joinYear": 2026
+}
+```
+
+- `id`：递增的唯一标识符
+- `name`：中文姓名
+- `nameEn`：英文姓名
+- `position`：英文职位
+- `positionCn`：中文职位
+- `category`：成员类别（"professor", "associate", "postdoc", "phd", "master", "undergraduate"）
+- `email`：电子邮箱
+- `research`：研究方向（英文）
+- `photo`：照片路径
+- `homepage`：个人主页链接（可选）
+- `joinYear`：加入年份
+
+---
+
 ## 快速参考：常用 Tailwind CSS 类
 
 ### 间距

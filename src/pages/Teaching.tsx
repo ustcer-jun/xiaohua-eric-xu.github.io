@@ -3,7 +3,7 @@ import courses from '@/data/courses.json';
 import { useI18n } from '@/i18n/I18nContext';
 
 const Teaching = () => {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
 
   return (
     <div className="min-h-screen bg-background py-12">
@@ -39,7 +39,7 @@ const Teaching = () => {
                   </div>
                   <div className="md:w-2/3">
                     <p className="text-text-primary mb-4">
-                      {course.description}
+                      {typeof course.description === 'object' ? course.description[locale] : course.description}
                     </p>
                     {course.syllabus && (
                       <a
