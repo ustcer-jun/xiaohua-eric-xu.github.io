@@ -7,8 +7,8 @@ import { useI18n } from '@/i18n/I18nContext';
 const News = () => {
   const { t, locale } = useI18n();
 
-  // Sort news by date in descending order
-  const sortedNews = [...newsData].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  // Sort news by date in ascending order (oldest first)
+  const sortedNews = [...newsData].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
   // Group news by year
   const newsByYear = sortedNews.reduce((acc, news) => {

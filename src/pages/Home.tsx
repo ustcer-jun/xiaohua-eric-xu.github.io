@@ -14,8 +14,9 @@ const Home = () => {
   // Get latest 3 news items
   const latestNews = newsData.slice(0, 3);
   
-  // Get latest 3 publications
-  const latestPublications = publicationsData.slice(0, 3);
+  // Get latest 2 publications by year descending
+  const sortedPublications = [...publicationsData].sort((a, b) => b.year - a.year);
+  const latestPublications = sortedPublications.slice(0, 2);
   
   // Gallery data
   const galleries = [
@@ -185,8 +186,8 @@ const Home = () => {
                     alt={gallery.name} 
                     className="w-full h-64 object-cover hover:opacity-90 transition-opacity"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-3">
-                    <h3 className="text-lg font-semibold">{gallery.name}</h3>
+                  <div className="absolute bottom-0 left-0 right-0 bg-white bg-opacity-20 backdrop-blur-sm text-white p-3">
+                    <h3 className="text-lg font-semibold text-white">{gallery.name}</h3>
                   </div>
                 </div>
               </div>

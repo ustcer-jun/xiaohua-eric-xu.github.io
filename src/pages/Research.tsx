@@ -16,7 +16,10 @@ const Research = () => {
     return parseInt(b) - parseInt(a);
   });
 
-  const filteredPublications = publications.filter(p => {
+  // Sort publications by year descending
+  const sortedPublications = [...publications].sort((a, b) => b.year - a.year);
+  
+  const filteredPublications = sortedPublications.filter(p => {
     const matchesYear = selectedYear === 'all' || p.year.toString() === selectedYear;
     const matchesType = selectedType === 'all' || p.type === selectedType;
     const matchesSearch = searchQuery === '' || 
