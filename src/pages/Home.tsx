@@ -78,8 +78,8 @@ const Home = () => {
             
             <div className="md:w-2/3">
               <img 
-                src={getImageUrl('/images/gallery/2024/group-1.jpg')} 
-                alt="USTC InSAR Group" 
+                src={getImageUrl('/images/gallery/2026/group.jpg')} 
+                alt="USTC InSAR Group"
                 className="w-full h-auto"
               />
             </div>
